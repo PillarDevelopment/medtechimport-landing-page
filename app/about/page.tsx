@@ -1,6 +1,5 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import { motion } from 'framer-motion'
 import { Users, Award, Globe, Clock, CheckCircle } from 'lucide-react'
 
 export default function AboutPage() {
@@ -61,19 +60,14 @@ export default function AboutPage() {
       {/* Hero секция */}
       <section className="bg-gradient-to-br from-primary-50 to-secondary-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
+          <div className="text-center">
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               О компании
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Ведущий поставщик медицинского оборудования в России с 2019 года
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -81,12 +75,7 @@ export default function AboutPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
+            <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
                 Наша история
               </h2>
@@ -105,43 +94,25 @@ export default function AboutPage() {
                 предоставляя врачам и медицинскому персоналу лучшие инструменты для 
                 спасения жизней и улучшения качества медицинской помощи.
               </p>
-            </motion.div>
+            </div>
             
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
+            <div>
               <img
                 src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 alt="Медицинское оборудование"
                 className="w-full h-96 object-cover rounded-2xl shadow-xl"
               />
-            </motion.div>
+            </div>
           </div>
 
           {/* Статистика */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-20"
-          >
+          <div className="text-center mb-20">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-12">
               Наши достижения
             </h2>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="text-center"
-                >
+                <div key={index} className="text-center">
                   <div className={`w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center ${
                     stat.color === 'primary' ? 'bg-primary-100 text-primary-500' :
                     stat.color === 'secondary' ? 'bg-secondary-100 text-secondary-500' :
@@ -155,31 +126,19 @@ export default function AboutPage() {
                   <div className="text-gray-600">
                     {stat.label}
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           {/* Ценности */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
+          <div>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-12">
               Наши ценности
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               {values.map((value, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="card"
-                >
+                <div key={index} className="card">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
                       <value.icon className="w-6 h-6 text-primary-500" />
@@ -193,39 +152,27 @@ export default function AboutPage() {
                       </p>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Команда */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
+          <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
               Наша команда
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Профессионалы с многолетним опытом в медицинской отрасли
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="card text-center"
-            >
+            <div className="card text-center">
               <div className="w-24 h-24 bg-primary-100 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <span className="text-2xl font-bold text-primary-500">АИ</span>
               </div>
@@ -238,15 +185,9 @@ export default function AboutPage() {
               <p className="text-gray-600">
                 15 лет опыта в медицинской отрасли, специалист по стратегическому развитию
               </p>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="card text-center"
-            >
+            <div className="card text-center">
               <div className="w-24 h-24 bg-secondary-100 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <span className="text-2xl font-bold text-secondary-500">МП</span>
               </div>
@@ -259,15 +200,9 @@ export default function AboutPage() {
               <p className="text-gray-600">
                 Эксперт по медицинскому оборудованию, сертификации и технической поддержке
               </p>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="card text-center"
-            >
+            <div className="card text-center">
               <div className="w-24 h-24 bg-accent-100 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <span className="text-2xl font-bold text-accent-500">ДС</span>
               </div>
@@ -280,7 +215,7 @@ export default function AboutPage() {
               <p className="text-gray-600">
                 Специалист по работе с клиентами и развитию партнерских отношений
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

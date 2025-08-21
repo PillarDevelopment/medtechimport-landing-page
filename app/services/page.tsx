@@ -1,104 +1,81 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import { motion } from 'framer-motion'
-import { Truck, FileText, Shield, Award, Settings, Users, Globe, Clock } from 'lucide-react'
+import { Truck, Shield, Wrench, FileText, Users, Clock } from 'lucide-react'
 
 export default function ServicesPage() {
   const services = [
     {
       icon: Truck,
       title: 'Поставка оборудования',
-      description: 'Прямые поставки медицинского оборудования от ведущих производителей со всего мира.',
-      features: [
-        'Прямые контракты с производителями',
-        'Оптимальные цены без посредников',
-        'Быстрые сроки поставки',
-        'Таможенное оформление'
-      ],
-      color: 'primary'
+      description: 'Прямые поставки от производителей с гарантией качества и лучшими ценами',
+      features: ['Прямые контракты с производителями', 'Гарантия качества', 'Лучшие цены на рынке']
     },
     {
       icon: FileText,
-      title: 'Сертификация и документооборот',
-      description: 'Полное сопровождение процесса сертификации и оформления всех необходимых документов.',
-      features: [
-        'Регистрационные удостоверения',
-        'Сертификаты соответствия',
-        'Паспорта и инструкции',
-        'Гарантийные документы'
-      ],
-      color: 'secondary'
+      title: 'Сертификация и регистрация',
+      description: 'Помощь в получении всех необходимых разрешений и сертификатов',
+      features: ['Регистрация в Росздравнадзоре', 'Получение сертификатов', 'Консультации по документации']
     },
     {
       icon: Shield,
       title: 'Гарантийное обслуживание',
-      description: 'Комплексное техническое обслуживание и ремонт медицинского оборудования.',
-      features: [
-        'Гарантийное обслуживание',
-        'Техническая поддержка 24/7',
-        'Запасные части',
-        'Обучение персонала'
-      ],
-      color: 'accent'
+      description: 'Полное гарантийное и постгарантийное обслуживание оборудования',
+      features: ['Гарантийный ремонт', 'Техническая поддержка', 'Замена комплектующих']
     },
     {
-      icon: Settings,
-      title: 'Монтаж и настройка',
-      description: 'Профессиональная установка, настройка и ввод в эксплуатацию оборудования.',
-      features: [
-        'Монтаж оборудования',
-        'Настройка и калибровка',
-        'Ввод в эксплуатацию',
-        'Обучение персонала'
-      ],
-      color: 'primary'
+      icon: Wrench,
+      title: 'Установка и настройка',
+      description: 'Профессиональная установка, настройка и обучение персонала',
+      features: ['Монтаж оборудования', 'Настройка параметров', 'Обучение персонала']
     },
     {
       icon: Users,
-      title: 'Консультации и обучение',
-      description: 'Профессиональные консультации по выбору оборудования и обучение персонала.',
-      features: [
-        'Консультации по выбору',
-        'Обучение персонала',
-        'Техническая документация',
-        'Онлайн поддержка'
-      ],
-      color: 'secondary'
+      title: 'Консультации',
+      description: 'Бесплатные консультации по выбору и эксплуатации оборудования',
+      features: ['Подбор оборудования', 'Технические консультации', 'Сравнительный анализ']
     },
     {
-      icon: Globe,
-      title: 'Логистика и доставка',
-      description: 'Организация доставки оборудования в любой регион России и СНГ.',
-      features: [
-        'Доставка по России',
-        'Международные перевозки',
-        'Страхование грузов',
-        'Отслеживание доставки'
-      ],
-      color: 'accent'
+      icon: Clock,
+      title: 'Логистика',
+      description: 'Организация доставки и таможенного оформления оборудования',
+      features: ['Международная доставка', 'Таможенное оформление', 'Страхование грузов']
     }
   ]
 
-  const advantages = [
+  const whyChooseUs = [
+    'Более 5 лет опыта в медицинской отрасли',
+    'Прямые контракты с ведущими производителями',
+    'Полный цикл услуг от выбора до установки',
+    'Гарантийное и постгарантийное обслуживание',
+    'Бесплатные консультации и техническая поддержка',
+    'Доставка по всей России'
+  ]
+
+  const howWeWork = [
     {
-      icon: Clock,
-      title: 'Быстрые сроки',
-      description: 'Поставка оборудования в кратчайшие сроки благодаря прямым контрактам с производителями'
+      step: '01',
+      title: 'Консультация',
+      description: 'Бесплатная консультация по выбору оборудования'
     },
     {
-      icon: Award,
-      title: 'Гарантия качества',
-      description: 'Все оборудование проходит строгий контроль качества и имеет необходимые сертификаты'
+      step: '02',
+      title: 'Подбор',
+      description: 'Подбор оптимального решения под ваши задачи'
     },
     {
-      icon: Users,
-      title: 'Персональный менеджер',
-      description: 'Каждому клиенту назначается персональный менеджер для решения всех вопросов'
+      step: '03',
+      title: 'Договор',
+      description: 'Заключение договора и согласование условий'
     },
     {
-      icon: Shield,
-      title: 'Полная поддержка',
-      description: 'Техническая поддержка и обслуживание на протяжении всего срока службы оборудования'
+      step: '04',
+      title: 'Поставка',
+      description: 'Поставка оборудования с установкой и настройкой'
+    },
+    {
+      step: '05',
+      title: 'Поддержка',
+      description: 'Гарантийное обслуживание и техническая поддержка'
     }
   ]
 
@@ -109,56 +86,34 @@ export default function ServicesPage() {
       {/* Hero секция */}
       <section className="bg-gradient-to-br from-primary-50 to-secondary-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
+          <div className="text-center">
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Наши услуги
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Полный спектр услуг по поставке и обслуживанию медицинского оборудования
+              Полный цикл услуг по поставке и обслуживанию медицинского оборудования
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* Основные услуги */}
+      {/* Услуги */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+          <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Основные услуги
+              Что мы предлагаем
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Мы предоставляем комплексные решения для медицинских учреждений
+              От выбора оборудования до его установки и обслуживания — мы берем на себя все заботы
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="card hover:shadow-xl transition-shadow duration-300"
-              >
-                <div className={`w-16 h-16 mb-6 rounded-lg flex items-center justify-center ${
-                  service.color === 'primary' ? 'bg-primary-100 text-primary-500' :
-                  service.color === 'secondary' ? 'bg-secondary-100 text-secondary-500' :
-                  'bg-accent-100 text-accent-500'
-                }`}>
-                  <service.icon className="w-8 h-8" />
+              <div key={index} className="card hover:shadow-xl transition-shadow duration-300">
+                <div className="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mb-6">
+                  <service.icon className="w-8 h-8 text-primary-500" />
                 </div>
                 
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
@@ -171,155 +126,95 @@ export default function ServicesPage() {
                 
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start space-x-2">
-                      <div className={`w-2 h-2 rounded-full mt-2 flex-shrink-0 ${
-                        service.color === 'primary' ? 'bg-primary-500' :
-                        service.color === 'secondary' ? 'bg-secondary-500' :
-                        'bg-accent-500'
-                      }`}></div>
-                      <span className="text-sm text-gray-600">{feature}</span>
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                      <div className="w-2 h-2 bg-primary-500 rounded-full mr-3"></div>
+                      {feature}
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Преимущества */}
+      {/* Почему выбирают нас */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Почему выбирают нас
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Наши преимущества в работе с медицинским оборудованием
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {advantages.map((advantage, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="flex items-start space-x-4"
-              >
-                <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <advantage.icon className="w-6 h-6 text-primary-500" />
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                Почему выбирают нас
+              </h2>
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                Мы заслужили доверие сотен медицинских учреждений благодаря 
+                качеству услуг и индивидуальному подходу к каждому клиенту.
+              </p>
+              
+              <div className="grid grid-cols-1 gap-4">
+                {whyChooseUs.map((item, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <div className="w-6 h-6 bg-primary-500 rounded-full flex items-center justify-center flex-shrink-0">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    <span className="text-gray-700">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div className="relative">
+              <img
+                src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Медицинское оборудование"
+                className="w-full h-96 object-cover rounded-2xl shadow-xl"
+              />
+              <div className="absolute -bottom-6 -left-6 bg-white rounded-lg shadow-lg p-6">
+                <div className="text-2xl font-bold text-primary-600 mb-2">
+                  500+ клиентов
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                    {advantage.title}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    {advantage.description}
-                  </p>
+                <div className="text-gray-600 text-sm">
+                  доверяют нам
                 </div>
-              </motion.div>
-            ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Процесс работы */}
+      {/* Как мы работаем */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+          <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
               Как мы работаем
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Простой и понятный процесс сотрудничества
+              Простой и понятный процесс работы с нами
             </p>
-          </motion.div>
+          </div>
 
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              {
-                step: '01',
-                title: 'Заявка',
-                description: 'Вы оставляете заявку на сайте или звоните нам'
-              },
-              {
-                step: '02',
-                title: 'Консультация',
-                description: 'Наш специалист связывается с вами для уточнения деталей'
-              },
-              {
-                step: '03',
-                title: 'Предложение',
-                description: 'Подготавливаем коммерческое предложение с учетом ваших потребностей'
-              },
-              {
-                step: '04',
-                title: 'Поставка',
-                description: 'Осуществляем поставку и ввод оборудования в эксплуатацию'
-              }
-            ].map((step, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
+          <div className="grid md:grid-cols-5 gap-8">
+            {howWeWork.map((step, index) => (
+              <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-primary-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
                   {step.step}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   {step.title}
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-sm">
                   {step.description}
                 </p>
-              </motion.div>
+                
+                {index < howWeWork.length - 1 && (
+                  <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gray-300 transform -translate-y-1/2">
+                    <div className="w-full h-full bg-primary-500"></div>
+                  </div>
+                )}
+              </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* CTA секция */}
-      <section className="py-20 bg-primary-500">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-              Готовы начать сотрудничество?
-            </h2>
-            <p className="text-xl text-primary-100 mb-8 max-w-3xl mx-auto">
-              Свяжитесь с нами для получения персонального предложения по медицинскому оборудованию
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-primary-500 hover:bg-gray-100 font-medium py-3 px-8 rounded-lg transition-colors duration-200">
-                Получить консультацию
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-primary-500 font-medium py-3 px-8 rounded-lg transition-colors duration-200">
-                Скачать каталог
-              </button>
-            </div>
-          </motion.div>
         </div>
       </section>
 

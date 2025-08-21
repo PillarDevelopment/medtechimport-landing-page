@@ -6,7 +6,7 @@ import About from '@/components/About'
 import ContactForm from '@/components/ContactForm'
 import Footer from '@/components/Footer'
 
-export default function Home() {
+export default function HomePage() {
   return (
     <main className="min-h-screen">
       <Header />
