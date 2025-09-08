@@ -13,7 +13,7 @@ export default function Footer() {
                 <span className="text-white font-bold text-lg">М</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold">DentMed</h3>
+                <h3 className="text-xl font-bold">МедТехИмпорт</h3>
                 <p className="text-sm text-gray-400">Стоматологические расходники</p>
               </div>
             </div>
@@ -118,7 +118,7 @@ export default function Footer() {
                 <Mail className="w-5 h-5 text-blue-400" />
                 <div>
                   <p className="text-gray-400">Email</p>
-                  <p className="font-medium">info@dentmed.ru</p>
+                  <p className="font-medium">info@medtechimport.ru</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
@@ -132,7 +132,7 @@ export default function Footer() {
                 <Clock className="w-5 h-5 text-blue-400" />
                 <div>
                   <p className="text-gray-400">Режим работы</p>
-                  <p className="font-medium">Пн-Пт: 9:00-18:00</p>
+                  <p className="font-medium">Пн-Пт: 8:00-21:00</p>
                 </div>
               </div>
             </div>
@@ -143,7 +143,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2024 DentMed. Все права защищены.
+              © 2025 МедТехИмпорт. Все права защищены.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">

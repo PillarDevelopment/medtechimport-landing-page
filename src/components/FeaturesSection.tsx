@@ -27,8 +27,8 @@ const features = [
   },
   {
     icon: Clock,
-    title: 'Круглосуточная работа',
-    description: 'Прием заказов 24/7, быстрая обработка заявок',
+    title: 'Расширенный режим работы',
+    description: 'Работаем с 8:00 до 21:00, быстрая обработка заявок',
     color: 'red'
   },
   {
@@ -98,8 +98,8 @@ export default function FeaturesSection() {
               <div className="text-blue-100">Лет на рынке</div>
             </div>
             <div>
-              <div className="text-4xl font-bold mb-2">24/7</div>
-              <div className="text-blue-100">Поддержка клиентов</div>
+              <div className="text-4xl font-bold mb-2">8-21</div>
+              <div className="text-blue-100">Режим работы</div>
             </div>
           </div>
         </div>

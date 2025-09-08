@@ -20,7 +20,7 @@ export default function Header() {
             </div>
             <div className="flex items-center space-x-2">
               <Mail className="w-4 h-4" />
-              <span>info@dentmed.ru</span>
+              <span>info@medtechimport.ru</span>
             </div>
           </div>
           <div className="text-sm">
@@ -38,7 +38,7 @@ export default function Header() {
               <span className="text-white font-bold text-xl">М</span>
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-gray-900">DentMed</h1>
+              <h1 className="text-2xl font-bold text-gray-900">МедТехИмпорт</h1>
               <p className="text-sm text-gray-600">Стоматологические расходники</p>
             </div>
           </Link>

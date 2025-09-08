@@ -62,7 +62,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">
-              О компании DentMed
+              О компании МедТехИмпорт
             </h1>
             <p className="text-xl lg:text-2xl text-blue-100 leading-relaxed">
               Ваш надежный поставщик качественных стоматологических расходных материалов 
@@ -99,7 +99,7 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Компания DentMed была основана в 2014 году с целью обеспечения 
+                  Компания МедТехИмпорт была основана в 2014 году с целью обеспечения 
                   стоматологических клиник качественными расходными материалами. 
                   За годы работы мы зарекомендовали себя как надежный партнер 
                   в сфере стоматологии.

@@ -8,12 +8,12 @@ const contactInfo = [
     icon: Phone,
     title: 'Телефон',
     details: ['+7 (495) 123-45-67', '+7 (495) 123-45-68'],
-    description: 'Звонки принимаются с 9:00 до 18:00'
+    description: 'Звонки принимаются с 8:00 до 21:00'
   },
   {
     icon: Mail,
     title: 'Email',
-    details: ['info@dentmed.ru', 'sales@dentmed.ru'],
+    details: ['info@medtechimport.ru', 'sales@medtechimport.ru'],
     description: 'Ответим в течение 2 часов'
   },
   {
@@ -25,7 +25,7 @@ const contactInfo = [
   {
     icon: Clock,
     title: 'Режим работы',
-    details: ['Пн-Пт: 9:00-18:00', 'Сб: 10:00-16:00'],
+    details: ['Пн-Пт: 8:00-21:00', 'Сб: 10:00-16:00'],
     description: 'Воскресенье - выходной'
   }
 ]
@@ -34,19 +34,19 @@ const departments = [
   {
     name: 'Отдел продаж',
     phone: '+7 (495) 123-45-67',
-    email: 'sales@dentmed.ru',
+    email: 'sales@medtechimport.ru',
     description: 'Консультации по стоматологическим товарам и оформление заказов'
   },
   {
     name: 'Техническая поддержка',
     phone: '+7 (495) 123-45-68',
-    email: 'support@dentmed.ru',
+    email: 'support@medtechimport.ru',
     description: 'Помощь с выбором стоматологических товаров и технические вопросы'
   },
   {
     name: 'Отдел закупок',
     phone: '+7 (495) 123-45-69',
-    email: 'purchasing@dentmed.ru',
+    email: 'purchasing@medtechimport.ru',
     description: 'Вопросы по поставкам и сотрудничеству'
   }
 ]
