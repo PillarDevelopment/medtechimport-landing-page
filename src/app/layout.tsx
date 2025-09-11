@@ -3,12 +3,13 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { JsonLd, generateWebSiteSchema, generateOrganizationSchema } from "@/lib/schema";
 
 const inter = Inter({ subsets: ["latin", "cyrillic"] });
 
 export const metadata: Metadata = {
-  title: "МедТехИмпорт - Стоматологические расходники",
-  description: "Качественные стоматологические расходные материалы для стоматологических клиник. Одноразовые инструменты, слепочные массы, боры, наконечники, ретракционные нити.",
+  title: "Стоматологические расходники | Купить оптом от 1500₽",
+  description: "Стоматологические расходники оптом и в розницу. 2000+ товаров Сертификаты Доставка по РФ. Скидки до 15% постоянным клиентам!",
   keywords: "стоматологические расходники, одноразовые инструменты, альгинат, стоматологические боры, наконечники, ретракционные нити",
 };
 
@@ -20,6 +21,10 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <head>
+        {/* Schema.org разметка */}
+        <JsonLd data={generateWebSiteSchema()} />
+        <JsonLd data={generateOrganizationSchema()} />
+        
         {/* Yandex.Metrika counter */}
         <script type="text/javascript" dangerouslySetInnerHTML={{
           __html: `

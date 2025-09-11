@@ -1,8 +1,10 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { Star, ShoppingCart, Heart, Share2, Truck, Shield, RotateCcw, CheckCircle } from 'lucide-react'
-import { getProductById, medicalProducts } from '@/lib/medical-products'
+import { getProductById, medicalProducts, categories } from '@/lib/medical-products'
 import { formatPrice, formatRating } from '@/lib/utils'
+import Breadcrumbs, { breadcrumbConfigs } from '@/components/Breadcrumbs'
+import { JsonLd, generateProductSchema, getBaseUrl } from '@/lib/schema'
 
 interface ProductPageProps {
   params: {
@@ -10,8 +12,9 @@ interface ProductPageProps {
   }
 }
 
-export default function ProductPage({ params }: ProductPageProps) {
-  const product = getProductById(params.id)
+export default async function ProductPage({ params }: ProductPageProps) {
+  const { id } = await params
+  const product = getProductById(id)
 
   if (!product) {
     notFound()
@@ -21,20 +24,35 @@ export default function ProductPage({ params }: ProductPageProps) {
     .filter(p => p.category === product.category && p.id !== product.id)
     .slice(0, 4)
 
+  const category = categories.find(cat => cat.id === product.category)
+
+  // Генерация schema.org разметки для товара
+  const productSchema = generateProductSchema({
+    name: product.name,
+    description: product.description,
+    image: product.image,
+    url: `${getBaseUrl()}/product/${product.id}`,
+    brand: product.brand,
+    category: category?.name || 'Стоматологические расходники',
+    price: product.price,
+    currency: 'RUB',
+    availability: product.inStock ? 'InStock' : 'OutOfStock',
+    rating: {
+      value: product.rating,
+      count: product.reviews
+    }
+  })
+
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Breadcrumb */}
-      <div className="bg-white border-b">
-        <div className="container mx-auto px-4 py-4">
-          <nav className="flex items-center space-x-2 text-sm">
-            <Link href="/" className="text-gray-500 hover:text-blue-600">Главная</Link>
-            <span className="text-gray-400">/</span>
-            <Link href="/catalog" className="text-gray-500 hover:text-blue-600">Каталог</Link>
-            <span className="text-gray-400">/</span>
-            <span className="text-gray-900">{product.name}</span>
-          </nav>
-        </div>
-      </div>
+      <JsonLd data={productSchema} />
+      <Breadcrumbs 
+        items={breadcrumbConfigs.product(
+          product.name, 
+          category?.name || 'Категория', 
+          product.category
+        )} 
+      />
 
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">

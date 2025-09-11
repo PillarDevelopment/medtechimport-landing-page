@@ -4,11 +4,29 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { Menu, X, Search, ShoppingCart, Phone, Mail } from 'lucide-react'
 import { categories } from '@/lib/medical-products'
+import { JsonLd, generateNavigationSchema } from '@/lib/schema'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  // Генерация schema.org разметки для навигации
+  const navigationItems = [
+    { name: 'Главная', url: '/', description: 'Главная страница МедТехИмпорт' },
+    { name: 'Каталог', url: '/catalog', description: 'Каталог стоматологических расходников' },
+    { name: 'О компании', url: '/about', description: 'Информация о компании МедТехИмпорт' },
+    { name: 'Контакты', url: '/contact', description: 'Контактная информация' },
+    ...categories.map(category => ({
+      name: category.name,
+      url: `/catalog/${category.id}`,
+      description: category.description
+    }))
+  ]
+
+  const navigationSchema = generateNavigationSchema(navigationItems)
+
   return (
+    <>
+      <JsonLd data={navigationSchema} />
     <header className="bg-white shadow-lg sticky top-0 z-50">
       {/* Top bar */}
       <div className="bg-blue-600 text-white py-2">
@@ -152,5 +170,6 @@ export default function Header() {
         </div>
       )}
     </header>
+    </>
   )
 }

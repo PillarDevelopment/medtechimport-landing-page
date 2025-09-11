@@ -1,7 +1,9 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react'
+import Breadcrumbs, { breadcrumbConfigs } from '@/components/Breadcrumbs'
 
 const contactInfo = [
   {
@@ -80,6 +82,8 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Breadcrumbs items={breadcrumbConfigs.contact} />
+      
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-blue-600 to-indigo-700 text-white py-20">
         <div className="container mx-auto px-4">
@@ -331,6 +335,43 @@ export default function ContactPage() {
                 закупок. Размер скидки обсуждается индивидуально с менеджером.
               </p>
             </div>
+          </div>
+        </div>
+
+        {/* Дополнительные ссылки для SEO */}
+        <div className="mt-12 bg-white rounded-lg shadow-sm p-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+            Полезные ссылки
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Link 
+              href="/catalog" 
+              className="p-6 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors text-center"
+            >
+              <h3 className="font-semibold text-gray-900 mb-2">каталог товаров</h3>
+              <p className="text-gray-600 text-sm">Посмотреть все товары</p>
+            </Link>
+            <Link 
+              href="/about" 
+              className="p-6 bg-green-50 rounded-lg hover:bg-green-100 transition-colors text-center"
+            >
+              <h3 className="font-semibold text-gray-900 mb-2">о компании</h3>
+              <p className="text-gray-600 text-sm">Узнать больше о нас</p>
+            </Link>
+            <Link 
+              href="/catalog/dental-burs" 
+              className="p-6 bg-purple-50 rounded-lg hover:bg-purple-100 transition-colors text-center"
+            >
+              <h3 className="font-semibold text-gray-900 mb-2">стоматологические боры</h3>
+              <p className="text-gray-600 text-sm">Популярная категория</p>
+            </Link>
+            <Link 
+              href="/" 
+              className="p-6 bg-orange-50 rounded-lg hover:bg-orange-100 transition-colors text-center"
+            >
+              <h3 className="font-semibold text-gray-900 mb-2">главная страница</h3>
+              <p className="text-gray-600 text-sm">Вернуться на главную</p>
+            </Link>
           </div>
         </div>
       </div>

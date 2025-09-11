@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Award, Users, Target, Shield, Truck, Headphones } from 'lucide-react'
+import Breadcrumbs, { breadcrumbConfigs } from '@/components/Breadcrumbs'
 
 const stats = [
   { icon: Users, value: '200+', label: 'Стоматологических клиник' },
@@ -57,6 +58,8 @@ const team = [
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <Breadcrumbs items={breadcrumbConfigs.about} />
+      
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-blue-600 to-indigo-700 text-white py-20">
         <div className="container mx-auto px-4">

@@ -6,6 +6,8 @@ import CategoryFilter from '@/components/CategoryFilter'
 import PriceFilter from '@/components/PriceFilter'
 import BrandFilter from '@/components/BrandFilter'
 import SortSelect from '@/components/SortSelect'
+import InternalLinks from '@/components/InternalLinks'
+import Breadcrumbs, { breadcrumbConfigs } from '@/components/Breadcrumbs'
 import { Filter, Grid, List } from 'lucide-react'
 
 interface CategoryPageProps {
@@ -14,30 +16,25 @@ interface CategoryPageProps {
   }
 }
 
-export default function CategoryPage({ params }: CategoryPageProps) {
-  const category = categories.find(cat => cat.id === params.category)
+export default async function CategoryPage({ params }: CategoryPageProps) {
+  const { category: categoryId } = await params
+  const category = categories.find(cat => cat.id === categoryId)
   
   if (!category) {
     notFound()
   }
 
-  const categoryProducts = getProductsByCategory(params.category)
+  const categoryProducts = getProductsByCategory(categoryId)
   const brands = Array.from(new Set(categoryProducts.map(product => product.brand)))
   const maxPrice = Math.max(...categoryProducts.map(product => product.price))
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Breadcrumbs items={breadcrumbConfigs.category(category.name)} />
+      
       {/* Header */}
       <div className="bg-white shadow-sm">
         <div className="container mx-auto px-4 py-8">
-          <nav className="flex items-center space-x-2 text-sm mb-4">
-            <Link href="/" className="text-gray-500 hover:text-blue-600">Главная</Link>
-            <span className="text-gray-400">/</span>
-            <Link href="/catalog" className="text-gray-500 hover:text-blue-600">Каталог</Link>
-            <span className="text-gray-400">/</span>
-            <span className="text-gray-900">{category.name}</span>
-          </nav>
-          
           <h1 className="text-3xl font-bold text-gray-900 mb-2">{category.name}</h1>
           <p className="text-gray-600 max-w-3xl">
             {category.description}
@@ -137,6 +134,19 @@ export default function CategoryPage({ params }: CategoryPageProps) {
                 >
                   Посмотреть все товары
                 </Link>
+              </div>
+            )}
+
+            {/* Cross-links for specific categories */}
+            {categoryId === 'dental-burs' && (
+              <div className="mt-8">
+                <InternalLinks type="dental-burs" />
+              </div>
+            )}
+
+            {categoryId === 'disposable-tips' && (
+              <div className="mt-8">
+                <InternalLinks type="disposable-tips" />
               </div>
             )}
 
