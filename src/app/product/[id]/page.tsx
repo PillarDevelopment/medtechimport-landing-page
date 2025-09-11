@@ -5,6 +5,7 @@ import { getProductById, medicalProducts, categories } from '@/lib/medical-produ
 import { formatPrice, formatRating } from '@/lib/utils'
 import Breadcrumbs, { breadcrumbConfigs } from '@/components/Breadcrumbs'
 import { JsonLd, generateProductSchema, getBaseUrl } from '@/lib/schema'
+import { getCategoryAltText } from '@/components/ProductImage'
 
 interface ProductPageProps {
   params: {
@@ -58,7 +59,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Product Images */}
           <div className="space-y-4">
-            <div className="aspect-square bg-white rounded-lg shadow-sm overflow-hidden">
+            <div className="aspect-square bg-white rounded-lg shadow-sm overflow-hidden" role="img" aria-label={getCategoryAltText(product.category, product.name)}>
               <div className="w-full h-full flex items-center justify-center bg-gray-100">
                 <div className="w-32 h-32 bg-blue-100 rounded-full flex items-center justify-center">
                   <span className="text-4xl font-bold text-blue-600">
@@ -71,7 +72,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
             {product.images.length > 1 && (
               <div className="grid grid-cols-4 gap-2">
                 {product.images.slice(1).map((image, index) => (
-                  <div key={index} className="aspect-square bg-white rounded-lg shadow-sm overflow-hidden">
+                  <div key={index} className="aspect-square bg-white rounded-lg shadow-sm overflow-hidden" role="img" aria-label={`${getCategoryAltText(product.category, product.name)} - дополнительное изображение ${index + 2}`}>
                     <div className="w-full h-full flex items-center justify-center bg-gray-100">
                       <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
                         <span className="text-sm font-bold text-blue-600">

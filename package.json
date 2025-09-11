@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "check-links": "node scripts/check-internal-links.js",
+    "check-links-real": "node scripts/check-links-simple.js",
     "check-health": "node scripts/check-link-health.js",
     "check-all": "node scripts/check-all-links.js",
     "check-links:dev": "npm run dev & sleep 5 && npm run check-all && pkill -f 'next dev'"

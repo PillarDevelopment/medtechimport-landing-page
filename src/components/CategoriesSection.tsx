@@ -17,7 +17,7 @@ export default function CategoriesSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            Наши категории товаров
+            Категории стоматологических материалов
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Широкий ассортимент стоматологических расходных материалов для всех видов стоматологической деятельности
@@ -42,7 +42,10 @@ export default function CategoriesSection() {
                 </div>
                 
                 <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  {category.name}
+                  {category.name === 'Одноразовые инструменты' ? 'Одноразовые стоматологические инструменты' :
+                   category.name === 'Слепочные массы' ? 'Слепочные массы (альгинатные)' :
+                   category.name === 'Стоматологические боры' ? 'Боры стоматологические' :
+                   category.name}
                 </h3>
                 
                 <p className="text-gray-600 mb-4">

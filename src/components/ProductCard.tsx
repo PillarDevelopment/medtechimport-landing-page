@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { Star, ShoppingCart, Heart, Eye } from 'lucide-react'
 import { MedicalProduct } from '@/lib/medical-products'
 import { formatPrice, formatRating } from '@/lib/utils'
+import { getCategoryAltText } from './ProductImage'
 
 interface ProductCardProps {
   product: MedicalProduct
@@ -11,7 +12,7 @@ export default function ProductCard({ product }: ProductCardProps) {
   return (
     <div className="bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden group">
       {/* Product Image */}
-      <div className="relative h-48 bg-gray-100">
+      <div className="relative h-48 bg-gray-100" role="img" aria-label={getCategoryAltText(product.category, product.name)}>
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center">
             <span className="text-2xl font-bold text-blue-600">

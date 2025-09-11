@@ -54,7 +54,7 @@ export default function FeaturesSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            Почему выбирают нас
+            Почему выбирают MTIOC
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Мы обеспечиваем высокое качество стоматологических материалов и надежность поставок
