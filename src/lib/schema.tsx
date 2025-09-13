@@ -66,13 +66,13 @@ export function generateNavigationSchema(items: NavigationItem[]): object {
     "@context": "https://schema.org",
     "@type": "SiteNavigationElement",
     "name": "Основная навигация",
-    "description": "Главное меню сайта МедТехИмпорт",
-    "url": "https://medtechimport.ru",
+    "description": "Главное меню сайта MTIOC",
+    "url": "https://mtioc.ru",
     "hasPart": items.map(item => ({
       "@type": "WebPageElement",
       "name": item.name,
       "url": item.url,
-      "description": item.description || `${item.name} - МедТехИмпорт`
+      "description": item.description || `${item.name} - MTIOC`
     }))
   }
 }
@@ -101,7 +101,8 @@ export function generateProductSchema(product: ProductSchema): object {
       "seller": {
         "@type": "Organization",
         "name": "МедТехИмпорт",
-        "url": "https://medtechimport.ru"
+        "alternateName": "MTIOC",
+        "url": "https://mtioc.ru"
       }
     }
   }
@@ -122,6 +123,52 @@ export function generateProductSchema(product: ProductSchema): object {
 }
 
 /**
+ * Генерация JSON-LD для магазина (Store)
+ */
+export function generateStoreSchema(): object {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "MTIOC - стоматологические расходники",
+    "description": "Поставка качественных расходников для стоматологии",
+    "url": "https://mtioc.ru",
+    "logo": "https://mtioc.ru/logo.png",
+    "image": "https://mtioc.ru/store-image.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ул. Медицинская, 123",
+      "addressLocality": "Москва",
+      "addressCountry": "RU"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+7-495-123-45-67",
+      "contactType": "customer service",
+      "availableLanguage": "Russian",
+      "hoursAvailable": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "21:00"
+      }
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "21:00"
+    },
+    "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer"],
+    "currenciesAccepted": "RUB",
+    "priceRange": "₽₽",
+    "sameAs": [
+      "https://vk.com/medtechimport",
+      "https://instagram.com/medtechimport"
+    ]
+  }
+}
+
+/**
  * Генерация JSON-LD для организации
  */
 export function generateOrganizationSchema(): object {
@@ -129,8 +176,9 @@ export function generateOrganizationSchema(): object {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "МедТехИмпорт",
-    "url": "https://medtechimport.ru",
-    "logo": "https://medtechimport.ru/logo.png",
+    "alternateName": "MTIOC",
+    "url": "https://mtioc.ru",
+    "logo": "https://mtioc.ru/logo.png",
     "description": "Поставщик качественных стоматологических расходных материалов",
     "address": {
       "@type": "PostalAddress",
@@ -142,7 +190,13 @@ export function generateOrganizationSchema(): object {
       "@type": "ContactPoint",
       "telephone": "+7-495-123-45-67",
       "contactType": "customer service",
-      "availableLanguage": "Russian"
+      "availableLanguage": "Russian",
+      "hoursAvailable": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "21:00"
+      }
     },
     "sameAs": [
       "https://vk.com/medtechimport",
@@ -158,17 +212,59 @@ export function generateWebSiteSchema(): object {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "МедТехИмпорт",
-    "url": "https://medtechimport.ru",
+    "name": "MTIOC - стоматологические расходники",
+    "url": "https://mtioc.ru",
     "description": "Качественные стоматологические расходные материалы оптом и в розницу",
     "publisher": {
       "@type": "Organization",
-      "name": "МедТехИмпорт"
+      "name": "МедТехИмпорт",
+      "alternateName": "MTIOC"
     },
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://medtechimport.ru/search?q={search_term_string}",
+      "target": "https://mtioc.ru/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
+    }
+  }
+}
+
+/**
+ * Генерация JSON-LD для местного бизнеса
+ */
+export function generateLocalBusinessSchema(): object {
+  return {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "MTIOC - стоматологические расходники",
+    "description": "Поставка качественных расходников для стоматологии",
+    "url": "https://mtioc.ru",
+    "logo": "https://mtioc.ru/logo.png",
+    "image": "https://mtioc.ru/store-image.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ул. Медицинская, 123",
+      "addressLocality": "Москва",
+      "addressCountry": "RU"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "55.7558",
+      "longitude": "37.6176"
+    },
+    "telephone": "+7-495-123-45-67",
+    "email": "info@mtioc.ru",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "21:00"
+    },
+    "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer"],
+    "currenciesAccepted": "RUB",
+    "priceRange": "₽₽",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Russia"
     }
   }
 }
@@ -182,7 +278,7 @@ export function generateCollectionSchema(products: ProductSchema[]): object {
     "@type": "CollectionPage",
     "name": "Каталог стоматологических расходников",
     "description": "Широкий ассортимент стоматологических расходных материалов",
-    "url": "https://medtechimport.ru/catalog",
+    "url": "https://mtioc.ru/catalog",
     "mainEntity": {
       "@type": "ItemList",
       "numberOfItems": products.length,
@@ -224,5 +320,5 @@ export function getBaseUrl(): string {
   if (typeof window !== 'undefined') {
     return window.location.origin
   }
-  return 'https://medtechimport.ru'
+  return 'https://mtioc.ru'
 }

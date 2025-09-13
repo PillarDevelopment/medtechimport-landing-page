@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { JsonLd, generateWebSiteSchema, generateOrganizationSchema } from "@/lib/schema";
+import { JsonLd, generateWebSiteSchema, generateOrganizationSchema, generateStoreSchema, generateLocalBusinessSchema } from "@/lib/schema";
 
 const inter = Inter({ subsets: ["latin", "cyrillic"] });
 
@@ -24,6 +24,8 @@ export default function RootLayout({
         {/* Schema.org разметка */}
         <JsonLd data={generateWebSiteSchema()} />
         <JsonLd data={generateOrganizationSchema()} />
+        <JsonLd data={generateStoreSchema()} />
+        <JsonLd data={generateLocalBusinessSchema()} />
         
         {/* Yandex.Metrika counter */}
         <script type="text/javascript" dangerouslySetInnerHTML={{

@@ -5,7 +5,7 @@ import { getProductById, medicalProducts, categories } from '@/lib/medical-produ
 import { formatPrice, formatRating } from '@/lib/utils'
 import Breadcrumbs, { breadcrumbConfigs } from '@/components/Breadcrumbs'
 import { JsonLd, generateProductSchema, getBaseUrl } from '@/lib/schema'
-import { getCategoryAltText } from '@/components/ProductImage'
+import { getCategoryAltText } from '@/lib/alt-texts'
 
 interface ProductPageProps {
   params: {

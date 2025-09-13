@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { Star, ShoppingCart, Heart, Eye } from 'lucide-react'
 import { MedicalProduct } from '@/lib/medical-products'
 import { formatPrice, formatRating } from '@/lib/utils'
-import { getCategoryAltText } from './ProductImage'
+import { getCategoryAltText } from '@/lib/alt-texts'
 
 interface ProductCardProps {
   product: MedicalProduct
