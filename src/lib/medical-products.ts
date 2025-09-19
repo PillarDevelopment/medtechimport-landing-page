@@ -95,6 +95,41 @@ export const categories: Category[] = [
       { id: 'hemostatic-cords', name: 'Гемостатические нити', description: 'Нить с гемостатическим эффектом' },
       { id: 'sizes', name: 'Различные размеры', description: 'Нить разных диаметров и длин' }
     ]
+  },
+  {
+    id: 'dental-materials',
+    name: 'Стоматологические материалы',
+    description: 'Гели, адгезивы и композитные материалы',
+    icon: 'Droplets',
+    subcategories: [
+      { id: 'etching-gels', name: 'Гели для травления', description: 'Гели для травления эмали и дентина' },
+      { id: 'adhesives', name: 'Адгезивы', description: 'Адгезивные системы для стоматологии' },
+      { id: 'composites', name: 'Композитные материалы', description: 'Композитные материалы для реставраций' },
+      { id: 'air-flow-powders', name: 'Порошки для Air Flow', description: 'Порошки для профессиональной гигиены' }
+    ]
+  },
+  {
+    id: 'endodontic-instruments',
+    name: 'Эндодонтические инструменты',
+    description: 'Инструменты для лечения корневых каналов',
+    icon: 'Syringe',
+    subcategories: [
+      { id: 'k-files', name: 'K-Files', description: 'К-файлы для обработки корневых каналов' },
+      { id: 'h-files', name: 'H-Files', description: 'Н-файлы и корневые буравы' },
+      { id: 'rotary-files', name: 'Машинные файлы', description: 'Файлы для машинной обработки' },
+      { id: 'mta-materials', name: 'МТА материалы', description: 'Материалы для пломбирования каналов' }
+    ]
+  },
+  {
+    id: 'isolation-materials',
+    name: 'Материалы для изоляции',
+    description: 'Раббердам и матрицы для изоляции рабочего поля',
+    icon: 'Shield',
+    subcategories: [
+      { id: 'rubber-dam', name: 'Раббердам', description: 'Коффердам для изоляции зуба' },
+      { id: 'matrices', name: 'Матрицы', description: 'Матрицы для восстановления зубов' },
+      { id: 'sterilization-tapes', name: 'Ленты для стерилизации', description: 'Ленты и материалы для стерилизации' }
+    ]
   }
 ];
 
@@ -309,6 +344,391 @@ export const medicalProducts: MedicalProduct[] = [
     certifications: ['ГОСТ Р 51000.3-96', 'CE'],
     rating: 4.5,
     reviews: 43
+  },
+  {
+    id: 'travex-37-etching-gel',
+    name: 'Травекс 37 гель для травления эмали 1шпр.х3,5мл',
+    category: 'dental-materials',
+    subcategory: 'etching-gels',
+    description: 'Гель для травления эмали с содержанием 37% ортофосфорной кислоты. Обеспечивает надежное травление поверхности зуба.',
+    price: 176,
+    image: '/images/travex-37-gel.jpg',
+    images: ['/images/travex-37-gel.jpg'],
+    inStock: true,
+    stockCount: 50,
+    brand: 'Travex',
+    specifications: {
+      'Объем': '3.5 мл',
+      'Концентрация кислоты': '37%',
+      'Форма выпуска': 'Шприц',
+      'Цвет': 'Голубой',
+      'pH': '0.6'
+    },
+    features: [
+      'Высокая эффективность травления',
+      'Удобная форма выпуска',
+      'Контролируемое нанесение',
+      'Быстрое действие'
+    ],
+    applications: [
+      'Травление эмали',
+      'Подготовка к адгезии',
+      'Реставрационные работы',
+      'Ортодонтическое лечение'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
+    rating: 4.7,
+    reviews: 89
+  },
+  {
+    id: 'air-flow-powder-neutral-ems',
+    name: 'Порошок для Air flow Нейтральный, EMS 300г',
+    category: 'dental-materials',
+    subcategory: 'air-flow-powders',
+    description: 'Нейтральный порошок для системы Air Flow EMS. Обеспечивает эффективное удаление налета и пигментации.',
+    price: 3815,
+    image: '/images/air-flow-powder.jpg',
+    images: ['/images/air-flow-powder.jpg'],
+    inStock: true,
+    stockCount: 25,
+    brand: 'EMS',
+    specifications: {
+      'Вес': '300 г',
+      'Тип': 'Нейтральный',
+      'Размер частиц': '65 мкм',
+      'pH': '7.0',
+      'Совместимость': 'EMS Air Flow'
+    },
+    features: [
+      'Мягкое воздействие',
+      'Эффективное удаление налета',
+      'Безопасность для эмали',
+      'Высокая производительность'
+    ],
+    applications: [
+      'Профессиональная гигиена',
+      'Удаление пигментации',
+      'Полировка зубов',
+      'Подготовка к отбеливанию'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
+    rating: 4.9,
+    reviews: 156
+  },
+  {
+    id: 'rubber-dam-kit-dental-dams',
+    name: 'Раббер Дам-набор листов Dental Dams Синие, Средней толщины, без запаха 36 шт',
+    category: 'isolation-materials',
+    subcategory: 'rubber-dam',
+    description: 'Набор листов раббердама средней толщины для изоляции рабочего поля. Обеспечивает сухость и чистоту процедуры.',
+    price: 540,
+    image: '/images/rubber-dam-kit.jpg',
+    images: ['/images/rubber-dam-kit.jpg'],
+    inStock: true,
+    stockCount: 40,
+    brand: 'Dental Dams',
+    specifications: {
+      'Количество': '36 штук',
+      'Толщина': 'Средняя',
+      'Цвет': 'Синий',
+      'Размер': '15x15 см',
+      'Запах': 'Без запаха'
+    },
+    features: [
+      'Средняя толщина',
+      'Без запаха',
+      'Хорошая эластичность',
+      'Надежная изоляция'
+    ],
+    applications: [
+      'Изоляция рабочего поля',
+      'Эндодонтическое лечение',
+      'Реставрационные работы',
+      'Профилактика инфекций'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
+    rating: 4.6,
+    reviews: 78
+  },
+  {
+    id: 'adper-single-bond-2',
+    name: 'Adper Single Bond 2 6 мл, 3M Espe',
+    category: 'dental-materials',
+    subcategory: 'adhesives',
+    description: 'Универсальная адгезивная система 5-го поколения. Обеспечивает надежную адгезию к эмали и дентину.',
+    price: 4420,
+    image: '/images/adper-single-bond.jpg',
+    images: ['/images/adper-single-bond.jpg'],
+    inStock: true,
+    stockCount: 15,
+    brand: '3M Espe',
+    specifications: {
+      'Объем': '6 мл',
+      'Поколение': '5-е поколение',
+      'Тип': 'Универсальный',
+      'pH': '3.2',
+      'Срок годности': '24 месяца'
+    },
+    features: [
+      'Универсальная адгезия',
+      'Простота применения',
+      'Высокая прочность связи',
+      'Стабильные результаты'
+    ],
+    applications: [
+      'Реставрационные работы',
+      'Адгезия композитов',
+      'Ортодонтическое лечение',
+      'Протезирование'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
+    rating: 4.8,
+    reviews: 234
+  },
+  {
+    id: 'contour-matrices-metal',
+    name: 'Матрицы 1.0976 контур.секц метал среди, твердые 50 мкм 10 шт ТОР ВМ',
+    category: 'isolation-materials',
+    subcategory: 'matrices',
+    description: 'Контурные секционные металлические матрицы средней толщины. Обеспечивают точное восстановление анатомической формы зуба.',
+    price: 105,
+    image: '/images/contour-matrices.jpg',
+    images: ['/images/contour-matrices.jpg'],
+    inStock: true,
+    stockCount: 80,
+    brand: 'ТОР ВМ',
+    specifications: {
+      'Количество': '10 штук',
+      'Толщина': '50 мкм',
+      'Материал': 'Металл',
+      'Тип': 'Секционные',
+      'Размер': 'Средний'
+    },
+    features: [
+      'Точное контурирование',
+      'Прочность материала',
+      'Легкая установка',
+      'Многоразовое использование'
+    ],
+    applications: [
+      'Восстановление зубов',
+      'Реставрационные работы',
+      'Формирование контактов',
+      'Пломбирование'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE'],
+    rating: 4.4,
+    reviews: 67
+  },
+  {
+    id: 'eurotape-sterilization-rolls',
+    name: 'Рулоны EuroTape для стерилизации 1 шт, EuroType (150мм х 200м)',
+    category: 'isolation-materials',
+    subcategory: 'sterilization-tapes',
+    description: 'Рулоны для стерилизации EuroTape. Обеспечивают надежную упаковку инструментов для стерилизации.',
+    price: 2085,
+    image: '/images/eurotape-rolls.jpg',
+    images: ['/images/eurotape-rolls.jpg'],
+    inStock: true,
+    stockCount: 20,
+    brand: 'EuroType',
+    specifications: {
+      'Ширина': '150 мм',
+      'Длина': '200 м',
+      'Материал': 'Крафт-бумага',
+      'Тип': 'Стерилизационная лента',
+      'Температура': 'До 180°C'
+    },
+    features: [
+      'Высокая прочность',
+      'Индикация стерилизации',
+      'Легкое использование',
+      'Экономичность'
+    ],
+    applications: [
+      'Упаковка инструментов',
+      'Стерилизация',
+      'Организация рабочего места',
+      'Соблюдение стандартов'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'ISO 11607'],
+    rating: 4.7,
+    reviews: 45
+  },
+  {
+    id: 'k-files-15-40-25mm',
+    name: 'K.Files №15-40 25мм - 6шт.',
+    category: 'endodontic-instruments',
+    subcategory: 'k-files',
+    description: 'Набор К-файлов для ручной обработки корневых каналов. Размеры от №15 до №40, длина 25 мм.',
+    price: 250,
+    image: '/images/k-files-set.jpg',
+    images: ['/images/k-files-set.jpg'],
+    inStock: true,
+    stockCount: 60,
+    brand: 'EndoTech',
+    specifications: {
+      'Количество': '6 штук',
+      'Размеры': '№15-40',
+      'Длина': '25 мм',
+      'Материал': 'Нержавеющая сталь',
+      'Тип': 'Ручные файлы'
+    },
+    features: [
+      'Высокое качество стали',
+      'Точная калибровка',
+      'Надежная фиксация',
+      'Долговечность'
+    ],
+    applications: [
+      'Обработка корневых каналов',
+      'Эндодонтическое лечение',
+      'Расширение каналов',
+      'Подготовка к пломбированию'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
+    rating: 4.5,
+    reviews: 89
+  },
+  {
+    id: 'h-files-root-reamers-25mm',
+    name: 'H-Files корневые буравы ручные, длина 25 мм, ISO-15-40 6шт',
+    category: 'endodontic-instruments',
+    subcategory: 'h-files',
+    description: 'Набор Н-файлов (корневых буравов) для ручной обработки корневых каналов. Размеры ISO 15-40, длина 25 мм.',
+    price: 300,
+    image: '/images/h-files-set.jpg',
+    images: ['/images/h-files-set.jpg'],
+    inStock: true,
+    stockCount: 55,
+    brand: 'EndoTech',
+    specifications: {
+      'Количество': '6 штук',
+      'Размеры': 'ISO 15-40',
+      'Длина': '25 мм',
+      'Материал': 'Нержавеющая сталь',
+      'Тип': 'Корневые буравы'
+    },
+    features: [
+      'Эффективная обработка',
+      'Прочная конструкция',
+      'Точные размеры',
+      'Удобная рукоятка'
+    ],
+    applications: [
+      'Обработка корневых каналов',
+      'Удаление дентина',
+      'Расширение каналов',
+      'Эндодонтическое лечение'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
+    rating: 4.6,
+    reviews: 76
+  },
+  {
+    id: 'sc-files-shape-memory',
+    name: 'Файлы машинные с памятью формы SC 6шт. (SC-Assorted L25 x6)',
+    category: 'endodontic-instruments',
+    subcategory: 'rotary-files',
+    description: 'Набор машинных файлов с памятью формы SC. Обеспечивают эффективную обработку корневых каналов.',
+    price: 1970,
+    image: '/images/sc-files-set.jpg',
+    images: ['/images/sc-files-set.jpg'],
+    inStock: true,
+    stockCount: 30,
+    brand: 'ShapeTech',
+    specifications: {
+      'Количество': '6 штук',
+      'Длина': '25 мм',
+      'Тип': 'Машинные файлы',
+      'Особенность': 'Память формы',
+      'Совместимость': 'Эндодонтические наконечники'
+    },
+    features: [
+      'Память формы',
+      'Высокая эффективность',
+      'Безопасность использования',
+      'Долговечность'
+    ],
+    applications: [
+      'Машинная обработка каналов',
+      'Эндодонтическое лечение',
+      'Расширение каналов',
+      'Профессиональная эндодонтия'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
+    rating: 4.8,
+    reviews: 123
+  },
+  {
+    id: 'mta-canal-material',
+    name: 'Канал МТА 3 шт.-материал для устранения дефектов корневых каналов, Омегадент',
+    category: 'endodontic-instruments',
+    subcategory: 'mta-materials',
+    description: 'МТА материал для устранения дефектов корневых каналов. Обеспечивает надежное пломбирование и герметизацию.',
+    price: 800,
+    image: '/images/mta-canal-material.jpg',
+    images: ['/images/mta-canal-material.jpg'],
+    inStock: true,
+    stockCount: 35,
+    brand: 'Омегадент',
+    specifications: {
+      'Количество': '3 штуки',
+      'Тип': 'МТА материал',
+      'Назначение': 'Пломбирование каналов',
+      'Совместимость': 'Биосовместимый',
+      'Срок годности': '24 месяца'
+    },
+    features: [
+      'Биосовместимость',
+      'Высокая прочность',
+      'Герметичность',
+      'Простота применения'
+    ],
+    applications: [
+      'Пломбирование каналов',
+      'Устранение дефектов',
+      'Эндодонтическое лечение',
+      'Репаративные процедуры'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
+    rating: 4.7,
+    reviews: 98
+  },
+  {
+    id: 'gradia-direct-anterior',
+    name: 'Gradia Direct Anterior - цвет А-А1 1шпр х 4,7г.',
+    category: 'dental-materials',
+    subcategory: 'composites',
+    description: 'Композитный материал для передних зубов цвета А-А1. Обеспечивает естественный вид реставраций.',
+    price: 3150,
+    image: '/images/gradia-direct-anterior.jpg',
+    images: ['/images/gradia-direct-anterior.jpg'],
+    inStock: true,
+    stockCount: 20,
+    brand: 'GC',
+    specifications: {
+      'Вес': '4.7 г',
+      'Цвет': 'А-А1',
+      'Назначение': 'Передние зубы',
+      'Форма выпуска': 'Шприц',
+      'Светоотверждение': 'Да'
+    },
+    features: [
+      'Естественный цвет',
+      'Высокая эстетика',
+      'Прочность',
+      'Легкость полировки'
+    ],
+    applications: [
+      'Реставрация передних зубов',
+      'Эстетические реставрации',
+      'Восстановление формы',
+      'Косметическая стоматология'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
+    rating: 4.9,
+    reviews: 187
   }
 ];
 
