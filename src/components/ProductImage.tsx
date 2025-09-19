@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 interface ProductImageProps {
   src: string;
@@ -8,6 +9,9 @@ interface ProductImageProps {
   className?: string;
   fallbackLetter: string;
   fallbackSize?: 'sm' | 'md' | 'lg';
+  width?: number;
+  height?: number;
+  priority?: boolean;
 }
 
 export default function ProductImage({ 
@@ -15,7 +19,10 @@ export default function ProductImage({
   alt, 
   className = "w-full h-full object-cover", 
   fallbackLetter,
-  fallbackSize = 'md'
+  fallbackSize = 'md',
+  width = 400,
+  height = 400,
+  priority = false
 }: ProductImageProps) {
   const [imageError, setImageError] = useState(false);
 
@@ -38,11 +45,16 @@ export default function ProductImage({
   }
 
   return (
-    <img 
+    <Image 
       src={src} 
       alt={alt}
+      width={width}
+      height={height}
       className={className}
+      priority={priority}
       onError={() => setImageError(true)}
+      placeholder="blur"
+      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
     />
   );
 }

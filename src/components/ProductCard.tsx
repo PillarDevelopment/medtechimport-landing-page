@@ -19,6 +19,9 @@ export default function ProductCard({ product }: ProductCardProps) {
           alt={getCategoryAltText(product.category, product.name)}
           fallbackLetter={product.name.charAt(0)}
           fallbackSize="md"
+          width={400}
+          height={192}
+          priority={false}
         />
         
         {/* Discount badge */}
