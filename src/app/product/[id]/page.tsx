@@ -6,6 +6,7 @@ import { formatPrice, formatRating } from '@/lib/utils'
 import Breadcrumbs, { breadcrumbConfigs } from '@/components/Breadcrumbs'
 import { JsonLd, generateProductSchema, getBaseUrl } from '@/lib/schema'
 import { getCategoryAltText } from '@/lib/alt-texts'
+import ProductImage from '@/components/ProductImage'
 
 interface ProductPageProps {
   params: {
@@ -60,26 +61,24 @@ export default async function ProductPage({ params }: ProductPageProps) {
           {/* Product Images */}
           <div className="space-y-4">
             <div className="aspect-square bg-white rounded-lg shadow-sm overflow-hidden" role="img" aria-label={getCategoryAltText(product.category, product.name)}>
-              <div className="w-full h-full flex items-center justify-center bg-gray-100">
-                <div className="w-32 h-32 bg-blue-100 rounded-full flex items-center justify-center">
-                  <span className="text-4xl font-bold text-blue-600">
-                    {product.name.charAt(0)}
-                  </span>
-                </div>
-              </div>
+              <ProductImage 
+                src={product.image} 
+                alt={getCategoryAltText(product.category, product.name)}
+                fallbackLetter={product.name.charAt(0)}
+                fallbackSize="lg"
+              />
             </div>
             
             {product.images.length > 1 && (
               <div className="grid grid-cols-4 gap-2">
                 {product.images.slice(1).map((image, index) => (
                   <div key={index} className="aspect-square bg-white rounded-lg shadow-sm overflow-hidden" role="img" aria-label={`${getCategoryAltText(product.category, product.name)} - дополнительное изображение ${index + 2}`}>
-                    <div className="w-full h-full flex items-center justify-center bg-gray-100">
-                      <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                        <span className="text-sm font-bold text-blue-600">
-                          {product.name.charAt(0)}
-                        </span>
-                      </div>
-                    </div>
+                    <ProductImage 
+                      src={image} 
+                      alt={`${getCategoryAltText(product.category, product.name)} - дополнительное изображение ${index + 2}`}
+                      fallbackLetter={product.name.charAt(0)}
+                      fallbackSize="sm"
+                    />
                   </div>
                 ))}
               </div>
@@ -250,12 +249,13 @@ export default async function ProductPage({ params }: ProductPageProps) {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {relatedProducts.map((relatedProduct) => (
                 <div key={relatedProduct.id} className="bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-                  <div className="h-48 bg-gray-100 flex items-center justify-center">
-                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
-                      <span className="text-xl font-bold text-blue-600">
-                        {relatedProduct.name.charAt(0)}
-                      </span>
-                    </div>
+                  <div className="h-48 bg-gray-100 overflow-hidden">
+                    <ProductImage 
+                      src={relatedProduct.image} 
+                      alt={getCategoryAltText(relatedProduct.category, relatedProduct.name)}
+                      fallbackLetter={relatedProduct.name.charAt(0)}
+                      fallbackSize="md"
+                    />
                   </div>
                   <div className="p-4">
                     <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2">
