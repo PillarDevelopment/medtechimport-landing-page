@@ -6,7 +6,6 @@ import CategoryFilter from '@/components/CategoryFilter'
 import PriceFilter from '@/components/PriceFilter'
 import BrandFilter from '@/components/BrandFilter'
 import SortSelect from '@/components/SortSelect'
-import Breadcrumbs, { breadcrumbConfigs } from '@/components/Breadcrumbs'
 import { JsonLd, generateCollectionSchema, getBaseUrl } from '@/lib/schema'
 import { Filter, Grid, List } from 'lucide-react'
 
@@ -32,7 +31,6 @@ export default function CatalogPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <JsonLd data={catalogSchema} />
-      <Breadcrumbs items={breadcrumbConfigs.catalog} />
       
       {/* Header */}
       <div className="bg-white shadow-sm">

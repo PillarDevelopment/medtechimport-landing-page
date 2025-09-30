@@ -6,7 +6,6 @@ import CategoryFilter from '@/components/CategoryFilter'
 import PriceFilter from '@/components/PriceFilter'
 import BrandFilter from '@/components/BrandFilter'
 import SortSelect from '@/components/SortSelect'
-import Breadcrumbs, { breadcrumbConfigs } from '@/components/Breadcrumbs'
 import { Filter, Grid, List, Heart, Crown, Scissors, Zap, Shield, Sparkles, Syringe } from 'lucide-react'
 
 const iconMap = {
@@ -40,7 +39,6 @@ export default async function SpecializationPage({ params }: SpecializationPageP
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Breadcrumbs items={breadcrumbConfigs.specialization(specialization.name)} />
       
       {/* Header */}
       <div className="bg-white shadow-sm">

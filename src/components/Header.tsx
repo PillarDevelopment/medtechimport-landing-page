@@ -2,8 +2,8 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { Menu, X, Search, ShoppingCart, Phone, Mail } from 'lucide-react'
-import { categories } from '@/lib/medical-products'
+import { Menu, X, Search, ShoppingCart } from 'lucide-react'
+import { categories, specializations } from '@/lib/medical-products'
 import { JsonLd, generateNavigationSchema } from '@/lib/schema'
 
 export default function Header() {
@@ -28,27 +28,6 @@ export default function Header() {
     <>
       <JsonLd data={navigationSchema} />
     <header className="bg-white shadow-lg sticky top-0 z-50">
-      {/* Top bar */}
-      <div className="bg-blue-600 text-white py-1">
-        <div className="container mx-auto px-4 flex justify-between items-center text-xs">
-          <div className="flex items-center space-x-2">
-            <div className="flex items-center space-x-1">
-              <Phone className="w-3 h-3" />
-              <span className="hidden sm:inline">+7 (495) 123-45-67</span>
-              <span className="sm:hidden">+7 (495) 123-45-67</span>
-            </div>
-            <div className="hidden md:flex items-center space-x-1">
-              <Mail className="w-3 h-3" />
-              <span>info@medtechimport.ru</span>
-            </div>
-          </div>
-          <div className="text-xs">
-            <span className="hidden sm:inline">Бесплатная доставка от 5000₽</span>
-            <span className="sm:hidden">Доставка от 5000₽</span>
-          </div>
-        </div>
-      </div>
-
       {/* Main header */}
       <div className="container mx-auto px-4 py-2">
         <div className="flex items-center justify-between">
@@ -104,10 +83,21 @@ export default function Header() {
                 Главная
               </Link>
             </li>
-            <li>
-              <Link href="/specializations" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+            <li className="relative group">
+              <span className="text-gray-700 hover:text-blue-600 font-medium transition-colors cursor-pointer">
                 Специализации
-              </Link>
+              </span>
+              <div className="absolute top-full left-0 mt-1 bg-white shadow-lg rounded-lg py-2 min-w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                {specializations.map((specialization) => (
+                  <Link 
+                    key={specialization.id}
+                    href={`/specializations/${specialization.id}`}
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                  >
+                    {specialization.name}
+                  </Link>
+                ))}
+              </div>
             </li>
             <li className="relative group">
               <span className="text-gray-700 hover:text-blue-600 font-medium transition-colors cursor-pointer">
@@ -150,10 +140,17 @@ export default function Header() {
                     Главная
                   </Link>
                 </li>
-                <li>
-                  <Link href="/specializations" className="block text-gray-700 hover:text-blue-600 font-medium py-1">
-                    Специализации
-                  </Link>
+                <li className="border-t pt-2 mt-2">
+                  <div className="text-gray-500 text-xs font-semibold mb-1">СПЕЦИАЛИЗАЦИИ</div>
+                  {specializations.map((specialization) => (
+                    <Link 
+                      key={specialization.id}
+                      href={`/specializations/${specialization.id}`}
+                      className="block text-gray-600 hover:text-blue-600 py-1 pl-2"
+                    >
+                      {specialization.name}
+                    </Link>
+                  ))}
                 </li>
                 <li className="border-t pt-2 mt-2">
                   <div className="text-gray-500 text-xs font-semibold mb-1">КАТАЛОГ</div>

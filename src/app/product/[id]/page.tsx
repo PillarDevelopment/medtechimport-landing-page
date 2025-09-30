@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { Star, ShoppingCart, Heart, Share2, Truck, Shield, RotateCcw, CheckCircle } from 'lucide-react'
 import { getProductById, medicalProducts, categories } from '@/lib/medical-products'
 import { formatPrice, formatRating } from '@/lib/utils'
-import Breadcrumbs, { breadcrumbConfigs } from '@/components/Breadcrumbs'
 import { JsonLd, generateProductSchema, getBaseUrl } from '@/lib/schema'
 import { getCategoryAltText } from '@/lib/alt-texts'
 import ProductImage from '@/components/ProductImage'
@@ -48,13 +47,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
   return (
     <div className="min-h-screen bg-gray-50">
       <JsonLd data={productSchema} />
-      <Breadcrumbs 
-        items={breadcrumbConfigs.product(
-          product.name, 
-          category?.name || 'Категория', 
-          product.category
-        )} 
-      />
 
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">

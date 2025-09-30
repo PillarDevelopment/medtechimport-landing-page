@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react'
-import Breadcrumbs, { breadcrumbConfigs } from '@/components/Breadcrumbs'
 
 const contactInfo = [
   {
@@ -82,7 +81,6 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Breadcrumbs items={breadcrumbConfigs.contact} />
       
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-blue-600 to-indigo-700 text-white py-20">

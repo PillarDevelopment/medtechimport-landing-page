@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { specializations, medicalProducts } from '@/lib/medical-products'
-import Breadcrumbs, { breadcrumbConfigs } from '@/components/Breadcrumbs'
 import { JsonLd, generateSpecializationsSchema, getBaseUrl } from '@/lib/schema'
 import { Heart, Crown, Scissors, Zap, Shield, Sparkles, Syringe } from 'lucide-react'
 
@@ -28,7 +27,6 @@ export default function SpecializationsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <JsonLd data={specializationsSchema} />
-      <Breadcrumbs items={breadcrumbConfigs.specializations} />
       
       {/* Header */}
       <div className="bg-white shadow-sm">

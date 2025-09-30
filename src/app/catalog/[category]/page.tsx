@@ -7,7 +7,6 @@ import PriceFilter from '@/components/PriceFilter'
 import BrandFilter from '@/components/BrandFilter'
 import SortSelect from '@/components/SortSelect'
 import InternalLinks from '@/components/InternalLinks'
-import Breadcrumbs, { breadcrumbConfigs } from '@/components/Breadcrumbs'
 import { Filter, Grid, List } from 'lucide-react'
 
 interface CategoryPageProps {
@@ -30,7 +29,6 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Breadcrumbs items={breadcrumbConfigs.category(category.name)} />
       
       {/* Header */}
       <div className="bg-white shadow-sm">
