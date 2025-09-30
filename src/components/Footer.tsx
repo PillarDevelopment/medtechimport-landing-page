@@ -111,7 +111,7 @@ export default function Footer() {
                 <Phone className="w-5 h-5 text-blue-400" />
                 <div>
                   <p className="text-gray-400">Телефон</p>
-                  <p className="font-medium">+7 (495) 123-45-67</p>
+                  <p className="font-medium">+7 961 627 15 55</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
@@ -125,7 +125,7 @@ export default function Footer() {
                 <MapPin className="w-5 h-5 text-blue-400" />
                 <div>
                   <p className="text-gray-400">Адрес</p>
-                  <p className="font-medium">г. Москва, ул. Медицинская, 123</p>
+                  <p className="font-medium">г. Москва, ул. Нижние Мневники, 16</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">

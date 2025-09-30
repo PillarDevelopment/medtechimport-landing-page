@@ -146,13 +146,13 @@
   "description": "Поставщик качественных стоматологических расходных материалов",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "ул. Медицинская, 123",
+    "streetAddress": "ул. Нижние Мневники, 16",
     "addressLocality": "Москва",
     "addressCountry": "RU"
   },
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+7-495-123-45-67",
+    "telephone": "+7-961-627-15-55",
     "contactType": "customer service",
     "availableLanguage": "Russian"
   }

@@ -136,13 +136,13 @@ export function generateStoreSchema(): object {
     "image": "https://mtioc.ru/store-image.jpg",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "ул. Медицинская, 123",
+      "streetAddress": "ул. Нижние Мневники, 16",
       "addressLocality": "Москва",
       "addressCountry": "RU"
     },
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+7-495-123-45-67",
+      "telephone": "+7-961-627-15-55",
       "contactType": "customer service",
       "availableLanguage": "Russian",
       "hoursAvailable": {
@@ -182,13 +182,13 @@ export function generateOrganizationSchema(): object {
     "description": "Поставщик качественных стоматологических расходных материалов",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "ул. Медицинская, 123",
+      "streetAddress": "ул. Нижние Мневники, 16",
       "addressLocality": "Москва",
       "addressCountry": "RU"
     },
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+7-495-123-45-67",
+      "telephone": "+7-961-627-15-55",
       "contactType": "customer service",
       "availableLanguage": "Russian",
       "hoursAvailable": {
@@ -242,7 +242,7 @@ export function generateLocalBusinessSchema(): object {
     "image": "https://mtioc.ru/store-image.jpg",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "ул. Медицинская, 123",
+      "streetAddress": "ул. Нижние Мневники, 16",
       "addressLocality": "Москва",
       "addressCountry": "RU"
     },
@@ -251,7 +251,7 @@ export function generateLocalBusinessSchema(): object {
       "latitude": "55.7558",
       "longitude": "37.6176"
     },
-    "telephone": "+7-495-123-45-67",
+    "telephone": "+7-961-627-15-55",
     "email": "info@mtioc.ru",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",

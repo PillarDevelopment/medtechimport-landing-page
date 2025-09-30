@@ -8,7 +8,7 @@ const contactInfo = [
   {
     icon: Phone,
     title: 'Телефон',
-    details: ['+7 (495) 123-45-67', '+7 (495) 123-45-68'],
+    details: ['+7 961 627 15 55'],
     description: 'Звонки принимаются с 8:00 до 21:00'
   },
   {
@@ -20,7 +20,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'Адрес',
-    details: ['г. Москва, ул. Медицинская, 123', 'БЦ "Медицинский", офис 456'],
+    details: ['г. Москва, ул. Нижние Мневники, 16'],
     description: 'Вход со стороны парковки'
   },
   {
@@ -34,19 +34,19 @@ const contactInfo = [
 const departments = [
   {
     name: 'Отдел продаж',
-    phone: '+7 (495) 123-45-67',
+    phone: '+7 961 627 15 55',
     email: 'sales@medtechimport.ru',
     description: 'Консультации по стоматологическим товарам и оформление заказов'
   },
   {
     name: 'Техническая поддержка',
-    phone: '+7 (495) 123-45-68',
+    phone: '+7 961 627 15 55',
     email: 'support@medtechimport.ru',
     description: 'Помощь с выбором стоматологических товаров и технические вопросы'
   },
   {
     name: 'Отдел закупок',
-    phone: '+7 (495) 123-45-69',
+    phone: '+7 961 627 15 55',
     email: 'purchasing@medtechimport.ru',
     description: 'Вопросы по поставкам и сотрудничеству'
   }
@@ -273,7 +273,7 @@ export default function ContactPage() {
                 <div className="text-center text-gray-500">
                   <MapPin className="w-8 h-8 mx-auto mb-2" />
                   <div className="text-sm">Карта</div>
-                  <div className="text-xs">г. Москва, ул. Медицинская, 123</div>
+                  <div className="text-xs">г. Москва, ул. Нижние Мневники, 16</div>
                 </div>
               </div>
             </div>
