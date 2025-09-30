@@ -80,6 +80,8 @@ export default function ContactPage() {
     try {
       // Используем конфигурацию для определения URL API
       const apiUrl = config.apiUrl
+      console.log('Отправляем запрос на:', apiUrl)
+      console.log('Данные формы:', formData)
       
       const controller = new AbortController()
       const timeoutId = setTimeout(() => controller.abort(), config.timeout)
@@ -95,7 +97,11 @@ export default function ContactPage() {
       
       clearTimeout(timeoutId)
 
+      console.log('Статус ответа:', response.status)
+      console.log('Заголовки ответа:', response.headers)
+      
       const result = await response.json()
+      console.log('Результат ответа:', result)
 
       if (response.ok) {
         setIsSubmitted(true)
