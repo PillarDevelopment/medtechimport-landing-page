@@ -302,6 +302,48 @@ export function generateCollectionSchema(products: ProductSchema[]): object {
 }
 
 /**
+ * Интерфейс для специализации
+ */
+export interface SpecializationSchema {
+  name: string
+  description: string
+  url: string
+  category: string
+}
+
+/**
+ * Генерация JSON-LD для коллекции специализаций
+ */
+export function generateSpecializationsSchema(specializations: SpecializationSchema[]): object {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Каталог по специализациям стоматологов",
+    "description": "Расходные материалы, организованные по специализациям стоматологов",
+    "url": "https://mtioc.ru/specializations",
+    "mainEntity": {
+      "@type": "ItemList",
+      "numberOfItems": specializations.length,
+      "itemListElement": specializations.map((spec, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": {
+          "@type": "WebPage",
+          "name": spec.name,
+          "description": spec.description,
+          "url": spec.url,
+          "about": {
+            "@type": "MedicalSpecialty",
+            "name": spec.name,
+            "description": spec.description
+          }
+        }
+      }))
+    }
+  }
+}
+
+/**
  * Компонент для вставки JSON-LD в head
  */
 export function JsonLd({ data }: { data: object }) {

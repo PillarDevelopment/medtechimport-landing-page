@@ -3,6 +3,7 @@ export interface MedicalProduct {
   name: string;
   category: string;
   subcategory: string;
+  specialization?: string; // Специализация стоматолога
   description: string;
   price: number;
   originalPrice?: number;
@@ -35,6 +36,125 @@ export interface Subcategory {
   description: string;
 }
 
+// Специализации стоматологов
+export const specializations: Category[] = [
+  {
+    id: 'therapist',
+    name: 'Терапевт',
+    description: 'Лечение кариеса, пульпита, пломбирование',
+    icon: 'Heart',
+    subcategories: [
+      { id: 'anesthetics', name: 'Анестетики', description: 'Местные анестетики для обезболивания' },
+      { id: 'composites', name: 'Композиты (светоотверждаемые)', description: 'Композитные материалы для пломбирования' },
+      { id: 'glass-ionomers', name: 'Стеклоиономеры', description: 'Стеклоиономерные цементы' },
+      { id: 'bonds-adhesives', name: 'Бонды/адгезивы', description: 'Адгезивные системы' },
+      { id: 'matrices', name: 'Матрицы', description: 'Матрицы для восстановления зубов' },
+      { id: 'wedges', name: 'Клинья', description: 'Клинья для фиксации матриц' },
+      { id: 'rubber-dam', name: 'Коффердам', description: 'Раббердам для изоляции' },
+      { id: 'etching-gels', name: 'Гели для травления', description: 'Ортофосфорная кислота' },
+      { id: 'endodontic-tools', name: 'Эндодонтические инструменты', description: 'Файлы, иглы для лечения каналов' },
+      { id: 'calcium-hydroxide', name: 'Кальций-гидроксидные препараты', description: 'Препараты для лечения пульпита' }
+    ]
+  },
+  {
+    id: 'orthopedist',
+    name: 'Ортопед',
+    description: 'Протезирование, коронки, виниры',
+    icon: 'Crown',
+    subcategories: [
+      { id: 'impression-materials', name: 'Оттискные материалы', description: 'Силиконы, альгинаты' },
+      { id: 'gypsum', name: 'Гипс', description: 'Гипсовые материалы для моделей' },
+      { id: 'cements', name: 'Цементы', description: 'Стеклоиономерные, композитные цементы' },
+      { id: 'temporary-materials', name: 'Временные пломбировочные материалы', description: 'Материалы для временных реставраций' },
+      { id: 'veneer-composites', name: 'Композиты для фиксации виниров', description: 'Адгезивы для виниров' },
+      { id: 'individual-trays', name: 'Индивидуальные ложки', description: 'Ложки для снятия оттисков' },
+      { id: 'laboratory-materials', name: 'Лабораторные материалы', description: 'Восковки, пластмассы' }
+    ]
+  },
+  {
+    id: 'surgeon',
+    name: 'Хирург',
+    description: 'Удаление зубов, имплантация, операции',
+    icon: 'Scissors',
+    subcategories: [
+      { id: 'anesthetics', name: 'Анестетики', description: 'Местные анестетики' },
+      { id: 'suture-materials', name: 'Шовный материал', description: 'Шелк, викрил' },
+      { id: 'sterile-wipes', name: 'Стерильные салфетки', description: 'Стерильные материалы' },
+      { id: 'gloves', name: 'Перчатки', description: 'Стерильные перчатки' },
+      { id: 'saline', name: 'Физиологический раствор', description: 'Раствор для промывания' },
+      { id: 'antiseptics', name: 'Хлоргексидин/антисептики', description: 'Антисептические растворы' },
+      { id: 'disposable-needles', name: 'Одноразовые иглы и шприцы', description: 'Инъекционные материалы' },
+      { id: 'surgical-burs', name: 'Боры хирургические', description: 'Боры для хирургических процедур' },
+      { id: 'osteoplastic-materials', name: 'Остеопластический материал', description: 'Материалы для костной пластики' },
+      { id: 'membranes', name: 'Мембраны', description: 'Мембраны для имплантации' }
+    ]
+  },
+  {
+    id: 'implantologist',
+    name: 'Имплантолог',
+    description: 'Установка имплантов, костная пластика',
+    icon: 'Zap',
+    subcategories: [
+      { id: 'implants-abutments', name: 'Импланты и абатменты', description: 'Имплантационные системы' },
+      { id: 'surgical-kits', name: 'Хирургические наборы', description: 'Наборы для имплантации' },
+      { id: 'osteoplastic-materials', name: 'Остеопластические материалы', description: 'Костный заменитель, мембраны' },
+      { id: 'suture-materials', name: 'Шовный материал', description: 'Материалы для ушивания' },
+      { id: 'anesthetics', name: 'Анестетики', description: 'Местные анестетики' },
+      { id: 'saline', name: 'Физиораствор', description: 'Раствор для промывания' },
+      { id: 'sterile-wipes', name: 'Стерильные салфетки', description: 'Стерильные материалы' },
+      { id: 'antiseptics', name: 'Антисептики', description: 'Антисептические растворы' }
+    ]
+  },
+  {
+    id: 'periodontist',
+    name: 'Пародонтолог',
+    description: 'Лечение десен, пародонтита',
+    icon: 'Shield',
+    subcategories: [
+      { id: 'scalers', name: 'Скалеры', description: 'Инструменты для удаления зубного камня' },
+      { id: 'ultrasonic-tips', name: 'Ультразвуковые насадки', description: 'Наконечники для ультразвука' },
+      { id: 'curettes', name: 'Кюреты', description: 'Кюреты для пародонтологии' },
+      { id: 'antiseptics', name: 'Антисептики', description: 'Хлоргексидин, перекись' },
+      { id: 'suture-materials', name: 'Шовный материал', description: 'Материалы для ушивания' },
+      { id: 'membranes', name: 'Мембраны', description: 'Мембраны для регенерации' },
+      { id: 'osteoplastic-materials', name: 'Остеопластические материалы', description: 'Материалы для костной пластики' },
+      { id: 'local-antibiotics', name: 'Местные антибиотики', description: 'Антибактериальные препараты' },
+      { id: 'chlorhexidine-gels', name: 'Гели с хлоргексидином', description: 'Гели для лечения десен' },
+      { id: 'anesthetics', name: 'Анестетики', description: 'Местные анестетики' }
+    ]
+  },
+  {
+    id: 'hygienist',
+    name: 'Гигиенист',
+    description: 'Профгигиена, профилактика',
+    icon: 'Sparkles',
+    subcategories: [
+      { id: 'airflow-powders', name: 'Абразивные порошки для AirFlow', description: 'Порошки для профессиональной гигиены' },
+      { id: 'polishing-pastes', name: 'Пасты для полировки', description: 'Полировочные пасты' },
+      { id: 'brushes-rubber-cups', name: 'Щетки и резинки для наконечников', description: 'Наконечники для полировки' },
+      { id: 'fluoride-varnishes', name: 'Фторсодержащие лаки и гели', description: 'Фторсодержащие препараты' },
+      { id: 'ultrasonic-consumables', name: 'Расходники для ультразвуковых скейлеров', description: 'Наконечники для ультразвука' },
+      { id: 'saliva-ejectors', name: 'Слюноотсосы', description: 'Одноразовые слюноотсосы' },
+      { id: 'disposable-cups-wipes', name: 'Одноразовые стаканы и салфетки', description: 'Одноразовые материалы' }
+    ]
+  },
+  {
+    id: 'endodontist',
+    name: 'Эндодонтист',
+    description: 'Лечение корневых каналов',
+    icon: 'Syringe',
+    subcategories: [
+      { id: 'hand-machine-files', name: 'Файлы ручные и машинные', description: 'Инструменты для обработки каналов' },
+      { id: 'irrigation-solutions', name: 'Ирригационные растворы', description: 'Гипохлорит, EDTA, хлоргексидин' },
+      { id: 'syringes-needles', name: 'Шприцы, иглы', description: 'Инструменты для ирригации' },
+      { id: 'gutta-percha-points', name: 'Гутаперчевые штифты', description: 'Материалы для пломбирования каналов' },
+      { id: 'sealers', name: 'Силеры', description: 'Эпоксидные, кальцийсодержащие' },
+      { id: 'microscopic-consumables', name: 'Микроскопические расходники', description: 'Расходники для микроскопа' }
+    ]
+  }
+];
+
+// Старые категории (сохраняем для совместимости)
 export const categories: Category[] = [
   {
     id: 'disposable-instruments',
@@ -139,6 +259,7 @@ export const medicalProducts: MedicalProduct[] = [
     name: 'Зеркало стоматологическое одноразовое (50 шт)',
     category: 'disposable-instruments',
     subcategory: 'mirrors',
+    specialization: 'therapist',
     description: 'Одноразовые стоматологические зеркала с качественным отражающим покрытием. Обеспечивают отличную видимость рабочего поля.',
     price: 1200,
     originalPrice: 1500,
@@ -175,6 +296,7 @@ export const medicalProducts: MedicalProduct[] = [
     name: 'Альгинат слепочный 500г',
     category: 'impression-materials',
     subcategory: 'alginate',
+    specialization: 'orthopedist',
     description: 'Высококачественная альгинатная слепочная масса для снятия оттисков. Обеспечивает точное воспроизведение деталей.',
     price: 850,
     image: '/images/alginate-material.jpg',
@@ -210,6 +332,7 @@ export const medicalProducts: MedicalProduct[] = [
     name: 'Набор алмазных боров 10 шт',
     category: 'dental-burs',
     subcategory: 'diamond-burs',
+    specialization: 'therapist',
     description: 'Набор алмазных боров различных форм и размеров для препарирования зубов. Высокое качество алмазного покрытия.',
     price: 2500,
     image: '/images/diamond-burs.jpg',
@@ -245,6 +368,7 @@ export const medicalProducts: MedicalProduct[] = [
     name: 'Наконечник турбинный одноразовый (100 шт)',
     category: 'disposable-tips',
     subcategory: 'turbine-tips',
+    specialization: 'therapist',
     description: 'Одноразовые наконечники для турбины с антибактериальным покрытием. Обеспечивают стерильность процедур.',
     price: 1800,
     image: '/images/turbine-tips.jpg',
@@ -280,6 +404,7 @@ export const medicalProducts: MedicalProduct[] = [
     name: 'Ретракционная нить гемостатическая 5м',
     category: 'retraction-cords',
     subcategory: 'hemostatic-cords',
+    specialization: 'therapist',
     description: 'Ретракционная нить с гемостатическим эффектом для работы с десной. Обеспечивает сухость рабочего поля.',
     price: 450,
     image: '/images/retraction-cord.jpg',
@@ -315,6 +440,7 @@ export const medicalProducts: MedicalProduct[] = [
     name: 'Чашка для замешивания одноразовая (50 шт)',
     category: 'impression-materials',
     subcategory: 'mixing-bowls',
+    specialization: 'orthopedist',
     description: 'Одноразовые чашки для замешивания альгинатных масс. Удобная форма и антистатическое покрытие.',
     price: 320,
     image: '/images/mixing-bowl.jpg',
@@ -350,6 +476,7 @@ export const medicalProducts: MedicalProduct[] = [
     name: 'Травекс 37 гель для травления эмали 1шпр.х3,5мл',
     category: 'dental-materials',
     subcategory: 'etching-gels',
+    specialization: 'therapist',
     description: 'Гель для травления эмали с содержанием 37% ортофосфорной кислоты. Обеспечивает надежное травление поверхности зуба.',
     price: 176,
     image: '/images/travex-37-gel.jpg',
@@ -385,6 +512,7 @@ export const medicalProducts: MedicalProduct[] = [
     name: 'Порошок для Air flow Нейтральный, EMS 300г',
     category: 'dental-materials',
     subcategory: 'air-flow-powders',
+    specialization: 'hygienist',
     description: 'Нейтральный порошок для системы Air Flow EMS. Обеспечивает эффективное удаление налета и пигментации.',
     price: 3815,
     image: '/images/air-flow-powder.jpg',
@@ -420,6 +548,7 @@ export const medicalProducts: MedicalProduct[] = [
     name: 'Раббер Дам-набор листов Dental Dams Синие, Средней толщины, без запаха 36 шт',
     category: 'isolation-materials',
     subcategory: 'rubber-dam',
+    specialization: 'therapist',
     description: 'Набор листов раббердама средней толщины для изоляции рабочего поля. Обеспечивает сухость и чистоту процедуры.',
     price: 540,
     image: '/images/rubber-dam-kit.jpg',
@@ -455,6 +584,7 @@ export const medicalProducts: MedicalProduct[] = [
     name: 'Adper Single Bond 2 6 мл, 3M Espe',
     category: 'dental-materials',
     subcategory: 'adhesives',
+    specialization: 'therapist',
     description: 'Универсальная адгезивная система 5-го поколения. Обеспечивает надежную адгезию к эмали и дентину.',
     price: 4420,
     image: '/images/adper-single-bond.jpg',
@@ -490,6 +620,7 @@ export const medicalProducts: MedicalProduct[] = [
     name: 'Матрицы 1.0976 контур.секц метал среди, твердые 50 мкм 10 шт ТОР ВМ',
     category: 'isolation-materials',
     subcategory: 'matrices',
+    specialization: 'therapist',
     description: 'Контурные секционные металлические матрицы средней толщины. Обеспечивают точное восстановление анатомической формы зуба.',
     price: 105,
     image: '/images/contour-matrices.jpg',
@@ -525,6 +656,7 @@ export const medicalProducts: MedicalProduct[] = [
     name: 'Рулоны EuroTape для стерилизации 1 шт, EuroType (150мм х 200м)',
     category: 'isolation-materials',
     subcategory: 'sterilization-tapes',
+    specialization: 'surgeon',
     description: 'Рулоны для стерилизации EuroTape. Обеспечивают надежную упаковку инструментов для стерилизации.',
     price: 2085,
     image: '/images/eurotape-rolls.jpg',
@@ -560,6 +692,7 @@ export const medicalProducts: MedicalProduct[] = [
     name: 'K.Files №15-40 25мм - 6шт.',
     category: 'endodontic-instruments',
     subcategory: 'k-files',
+    specialization: 'endodontist',
     description: 'Набор К-файлов для ручной обработки корневых каналов. Размеры от №15 до №40, длина 25 мм.',
     price: 250,
     image: '/images/k-files-set.jpg',
@@ -595,6 +728,7 @@ export const medicalProducts: MedicalProduct[] = [
     name: 'H-Files корневые буравы ручные, длина 25 мм, ISO-15-40 6шт',
     category: 'endodontic-instruments',
     subcategory: 'h-files',
+    specialization: 'endodontist',
     description: 'Набор Н-файлов (корневых буравов) для ручной обработки корневых каналов. Размеры ISO 15-40, длина 25 мм.',
     price: 300,
     image: '/images/h-files-set.jpg',
@@ -630,6 +764,7 @@ export const medicalProducts: MedicalProduct[] = [
     name: 'Файлы машинные с памятью формы SC 6шт. (SC-Assorted L25 x6)',
     category: 'endodontic-instruments',
     subcategory: 'rotary-files',
+    specialization: 'endodontist',
     description: 'Набор машинных файлов с памятью формы SC. Обеспечивают эффективную обработку корневых каналов.',
     price: 1970,
     image: '/images/sc-files-set.jpg',
@@ -665,6 +800,7 @@ export const medicalProducts: MedicalProduct[] = [
     name: 'Канал МТА 3 шт.-материал для устранения дефектов корневых каналов, Омегадент',
     category: 'endodontic-instruments',
     subcategory: 'mta-materials',
+    specialization: 'endodontist',
     description: 'МТА материал для устранения дефектов корневых каналов. Обеспечивает надежное пломбирование и герметизацию.',
     price: 800,
     image: '/images/mta-canal-material.jpg',
@@ -700,6 +836,7 @@ export const medicalProducts: MedicalProduct[] = [
     name: 'Gradia Direct Anterior - цвет А-А1 1шпр х 4,7г.',
     category: 'dental-materials',
     subcategory: 'composites',
+    specialization: 'therapist',
     description: 'Композитный материал для передних зубов цвета А-А1. Обеспечивает естественный вид реставраций.',
     price: 3150,
     image: '/images/gradia-direct-anterior.jpg',
@@ -746,5 +883,21 @@ export function searchProducts(query: string): MedicalProduct[] {
     product.name.toLowerCase().includes(lowercaseQuery) ||
     product.description.toLowerCase().includes(lowercaseQuery) ||
     product.brand.toLowerCase().includes(lowercaseQuery)
+  );
+}
+
+// Функции для работы со специализациями
+export function getProductsBySpecialization(specializationId: string): MedicalProduct[] {
+  return medicalProducts.filter(product => product.specialization === specializationId);
+}
+
+export function getSpecializationById(id: string): Category | undefined {
+  return specializations.find(spec => spec.id === id);
+}
+
+export function getProductsBySpecializationAndSubcategory(specializationId: string, subcategoryId: string): MedicalProduct[] {
+  return medicalProducts.filter(product => 
+    product.specialization === specializationId && 
+    product.subcategory === subcategoryId
   );
 }

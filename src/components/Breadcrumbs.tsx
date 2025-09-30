@@ -102,5 +102,16 @@ export const breadcrumbConfigs = {
   contact: [
     { label: 'Главная', href: '/' },
     { label: 'Контакты', current: true }
+  ],
+  
+  specializations: [
+    { label: 'Главная', href: '/' },
+    { label: 'Специализации', current: true }
+  ],
+  
+  specialization: (specializationName: string) => [
+    { label: 'Главная', href: '/' },
+    { label: 'Специализации', href: '/specializations' },
+    { label: specializationName, current: true }
   ]
 }

@@ -12,7 +12,7 @@ export default function Header() {
   // Генерация schema.org разметки для навигации
   const navigationItems = [
     { name: 'Главная', url: '/', description: 'Главная страница МедТехИмпорт' },
-    { name: 'Каталог', url: '/catalog', description: 'Каталог стоматологических расходников' },
+    { name: 'Специализации', url: '/specializations', description: 'Каталог по специализациям стоматологов' },
     { name: 'О компании', url: '/about', description: 'Информация о компании МедТехИмпорт' },
     { name: 'Контакты', url: '/contact', description: 'Контактная информация' },
     ...categories.map(category => ({
@@ -105,13 +105,13 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="/catalog" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-                Каталог
+              <Link href="/specializations" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                Специализации
               </Link>
             </li>
             <li className="relative group">
               <span className="text-gray-700 hover:text-blue-600 font-medium transition-colors cursor-pointer">
-                Категории
+                Каталог
               </span>
               <div className="absolute top-full left-0 mt-1 bg-white shadow-lg rounded-lg py-2 min-w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 {categories.map((category) => (
@@ -151,12 +151,12 @@ export default function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/catalog" className="block text-gray-700 hover:text-blue-600 font-medium py-1">
-                    Каталог
+                  <Link href="/specializations" className="block text-gray-700 hover:text-blue-600 font-medium py-1">
+                    Специализации
                   </Link>
                 </li>
                 <li className="border-t pt-2 mt-2">
-                  <div className="text-gray-500 text-xs font-semibold mb-1">КАТЕГОРИИ</div>
+                  <div className="text-gray-500 text-xs font-semibold mb-1">КАТАЛОГ</div>
                   {categories.map((category) => (
                     <Link 
                       key={category.id}

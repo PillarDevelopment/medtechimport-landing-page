@@ -70,14 +70,26 @@ export default function CategoriesSection() {
           })}
         </div>
 
-        <div className="text-center mt-12">
-          <Link
-            href="/catalog"
-            className="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors group"
-          >
-            Смотреть все товары
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Link>
+        <div className="text-center mt-12 space-y-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/catalog"
+              className="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors group"
+            >
+              Смотреть все товары
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              href="/specializations"
+              className="inline-flex items-center bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors group"
+            >
+              Каталог по специализациям
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+          <p className="text-sm text-gray-500">
+            Выберите удобный способ поиска товаров: по категориям или по специализациям стоматологов
+          </p>
         </div>
       </div>
     </section>
