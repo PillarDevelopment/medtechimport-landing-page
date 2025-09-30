@@ -119,9 +119,16 @@ export default function ContactPage() {
       }
     } catch (error) {
       console.error('Error sending message:', error)
+      console.error('Error details:', {
+        name: error instanceof Error ? error.name : 'Unknown',
+        message: error instanceof Error ? error.message : String(error),
+        stack: error instanceof Error ? error.stack : undefined
+      })
       
       if (error instanceof Error && error.name === 'AbortError') {
         alert('Превышено время ожидания. Попробуйте еще раз.')
+      } else if (error instanceof Error && error.message.includes('Failed to fetch')) {
+        alert('Ошибка сети. Проверьте подключение к интернету.')
       } else {
         alert('Произошла ошибка при отправке сообщения')
       }
