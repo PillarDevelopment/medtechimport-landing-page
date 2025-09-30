@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react'
+import { config } from '@/lib/config'
 
 const contactInfo = [
   {
@@ -77,13 +78,22 @@ export default function ContactPage() {
     setIsLoading(true)
     
     try {
-      const response = await fetch('/api/send-message', {
+      // Используем конфигурацию для определения URL API
+      const apiUrl = config.apiUrl
+      
+      const controller = new AbortController()
+      const timeoutId = setTimeout(() => controller.abort(), config.timeout)
+      
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
+        signal: controller.signal,
       })
+      
+      clearTimeout(timeoutId)
 
       const result = await response.json()
 
@@ -103,7 +113,12 @@ export default function ContactPage() {
       }
     } catch (error) {
       console.error('Error sending message:', error)
-      alert('Произошла ошибка при отправке сообщения')
+      
+      if (error.name === 'AbortError') {
+        alert('Превышено время ожидания. Попробуйте еще раз.')
+      } else {
+        alert('Произошла ошибка при отправке сообщения')
+      }
     } finally {
       setIsLoading(false)
     }
