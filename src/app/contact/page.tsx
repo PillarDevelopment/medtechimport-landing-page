@@ -114,7 +114,7 @@ export default function ContactPage() {
     } catch (error) {
       console.error('Error sending message:', error)
       
-      if (error.name === 'AbortError') {
+      if (error instanceof Error && error.name === 'AbortError') {
         alert('Превышено время ожидания. Попробуйте еще раз.')
       } else {
         alert('Произошла ошибка при отправке сообщения')
