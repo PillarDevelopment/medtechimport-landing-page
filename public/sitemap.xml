@@ -214,4 +214,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+  
+  <!-- Yandex verification file -->
+  <url>
+    <loc>https://mtioc.ru/yandex_89ad250acb0a7899.html</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
+  </url>
 </urlset>

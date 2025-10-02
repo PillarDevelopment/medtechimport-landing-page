@@ -9,6 +9,7 @@ Allow: /specializations
 Allow: /specializations/*
 Allow: /about
 Allow: /contact
+Allow: /yandex_89ad250acb0a7899.html
 
 # Запрещаем индексацию служебных файлов
 Disallow: /api/
