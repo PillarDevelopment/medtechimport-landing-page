@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Разрешаем индексацию всех страниц
+Allow: /catalog
+Allow: /catalog/*
+Allow: /product/*
+Allow: /specializations
+Allow: /specializations/*
+Allow: /about
+Allow: /contact
+
+# Запрещаем индексацию служебных файлов
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap
+Sitemap: https://mtioc.ru/sitemap.xml
+
+# Дополнительные настройки для поисковых систем
+Crawl-delay: 1

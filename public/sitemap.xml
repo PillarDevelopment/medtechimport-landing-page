@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Главная страница -->
+  <url>
+    <loc>https://mtioc.ru/</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Статические страницы -->
+  <url>
+    <loc>https://mtioc.ru/about</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://mtioc.ru/contact</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://mtioc.ru/catalog</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://mtioc.ru/specializations</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Категории -->
+  <url>
+    <loc>https://mtioc.ru/catalog/disposable-instruments</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://mtioc.ru/catalog/impression-materials</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://mtioc.ru/catalog/dental-burs</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://mtioc.ru/catalog/disposable-tips</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://mtioc.ru/catalog/retraction-cords</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://mtioc.ru/catalog/dental-materials</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://mtioc.ru/catalog/endodontic-instruments</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://mtioc.ru/catalog/isolation-materials</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Специализации -->
+  <url>
+    <loc>https://mtioc.ru/specializations/therapist</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://mtioc.ru/specializations/orthopedist</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://mtioc.ru/specializations/surgeon</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://mtioc.ru/specializations/implantologist</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://mtioc.ru/specializations/periodontist</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://mtioc.ru/specializations/hygienist</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://mtioc.ru/specializations/endodontist</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Популярные продукты -->
+  <url>
+    <loc>https://mtioc.ru/product/dental-mirror-disposable-50</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://mtioc.ru/product/alginate-impression-material-500g</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://mtioc.ru/product/diamond-bur-set-10pcs</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://mtioc.ru/product/turbine-tip-disposable-100</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://mtioc.ru/product/retraction-cord-hemostatic-5m</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://mtioc.ru/product/travex-37-etching-gel</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://mtioc.ru/product/air-flow-powder-neutral-ems</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://mtioc.ru/product/rubber-dam-kit-dental-dams</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://mtioc.ru/product/adper-single-bond-2</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://mtioc.ru/product/gradia-direct-anterior</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>
