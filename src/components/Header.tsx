@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { Menu, X, Search, ShoppingCart } from 'lucide-react'
+import { Menu, X, ShoppingCart } from 'lucide-react'
 import { categories, specializations } from '@/lib/medical-products'
 import { JsonLd, generateNavigationSchema } from '@/lib/schema'
 
@@ -41,18 +41,6 @@ export default function Header() {
               <p className="text-xs text-gray-600 hidden sm:block">Стоматологические расходники</p>
             </div>
           </Link>
-
-          {/* Search */}
-          <div className="flex-1 max-w-xl mx-4">
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Поиск товаров..."
-                className="w-full px-3 py-2 pl-10 pr-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
-              />
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-            </div>
-          </div>
 
           {/* Cart and Menu */}
           <div className="flex items-center space-x-2">
