@@ -65,24 +65,6 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
           {/* Main Content */}
           <div className="flex-1">
-            {/* Subcategories */}
-            {category.subcategories.length > 0 && (
-              <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Подкатегории</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {category.subcategories.map((subcategory) => (
-                    <a
-                      key={subcategory.id}
-                      href={`/catalog/${category.id}/${subcategory.id}`}
-                      className="p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors"
-                    >
-                      <h4 className="font-medium text-gray-900 mb-1">{subcategory.name}</h4>
-                      <p className="text-sm text-gray-600">{subcategory.description}</p>
-                    </a>
-                  ))}
-                </div>
-              </div>
-            )}
 
             {/* Toolbar */}
             <div className="bg-white rounded-lg shadow-sm p-4 mb-6">

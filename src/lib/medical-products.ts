@@ -27,14 +27,8 @@ export interface Category {
   name: string;
   description: string;
   icon: string;
-  subcategories: Subcategory[];
 }
 
-export interface Subcategory {
-  id: string;
-  name: string;
-  description: string;
-}
 
 // Специализации стоматологов
 export const specializations: Category[] = [
@@ -42,115 +36,43 @@ export const specializations: Category[] = [
     id: 'therapist',
     name: 'Терапевт',
     description: 'Лечение кариеса, пульпита, пломбирование',
-    icon: 'Heart',
-    subcategories: [
-      { id: 'anesthetics', name: 'Анестетики', description: 'Местные анестетики для обезболивания' },
-      { id: 'composites', name: 'Композиты (светоотверждаемые)', description: 'Композитные материалы для пломбирования' },
-      { id: 'glass-ionomers', name: 'Стеклоиономеры', description: 'Стеклоиономерные цементы' },
-      { id: 'bonds-adhesives', name: 'Бонды/адгезивы', description: 'Адгезивные системы' },
-      { id: 'matrices', name: 'Матрицы', description: 'Матрицы для восстановления зубов' },
-      { id: 'wedges', name: 'Клинья', description: 'Клинья для фиксации матриц' },
-      { id: 'rubber-dam', name: 'Коффердам', description: 'Раббердам для изоляции' },
-      { id: 'etching-gels', name: 'Гели для травления', description: 'Ортофосфорная кислота' },
-      { id: 'endodontic-tools', name: 'Эндодонтические инструменты', description: 'Файлы, иглы для лечения каналов' },
-      { id: 'calcium-hydroxide', name: 'Кальций-гидроксидные препараты', description: 'Препараты для лечения пульпита' }
-    ]
+    icon: 'Heart'
   },
   {
     id: 'orthopedist',
     name: 'Ортопед',
     description: 'Протезирование, коронки, виниры',
-    icon: 'Crown',
-    subcategories: [
-      { id: 'impression-materials', name: 'Оттискные материалы', description: 'Силиконы, альгинаты' },
-      { id: 'gypsum', name: 'Гипс', description: 'Гипсовые материалы для моделей' },
-      { id: 'cements', name: 'Цементы', description: 'Стеклоиономерные, композитные цементы' },
-      { id: 'temporary-materials', name: 'Временные пломбировочные материалы', description: 'Материалы для временных реставраций' },
-      { id: 'veneer-composites', name: 'Композиты для фиксации виниров', description: 'Адгезивы для виниров' },
-      { id: 'individual-trays', name: 'Индивидуальные ложки', description: 'Ложки для снятия оттисков' },
-      { id: 'laboratory-materials', name: 'Лабораторные материалы', description: 'Восковки, пластмассы' }
-    ]
+    icon: 'Crown'
   },
   {
     id: 'surgeon',
     name: 'Хирург',
     description: 'Удаление зубов, имплантация, операции',
-    icon: 'Scissors',
-    subcategories: [
-      { id: 'anesthetics', name: 'Анестетики', description: 'Местные анестетики' },
-      { id: 'suture-materials', name: 'Шовный материал', description: 'Шелк, викрил' },
-      { id: 'sterile-wipes', name: 'Стерильные салфетки', description: 'Стерильные материалы' },
-      { id: 'gloves', name: 'Перчатки', description: 'Стерильные перчатки' },
-      { id: 'saline', name: 'Физиологический раствор', description: 'Раствор для промывания' },
-      { id: 'antiseptics', name: 'Хлоргексидин/антисептики', description: 'Антисептические растворы' },
-      { id: 'disposable-needles', name: 'Одноразовые иглы и шприцы', description: 'Инъекционные материалы' },
-      { id: 'surgical-burs', name: 'Боры хирургические', description: 'Боры для хирургических процедур' },
-      { id: 'osteoplastic-materials', name: 'Остеопластический материал', description: 'Материалы для костной пластики' },
-      { id: 'membranes', name: 'Мембраны', description: 'Мембраны для имплантации' }
-    ]
+    icon: 'Scissors'
   },
   {
     id: 'implantologist',
     name: 'Имплантолог',
     description: 'Установка имплантов, костная пластика',
-    icon: 'Zap',
-    subcategories: [
-      { id: 'implants-abutments', name: 'Импланты и абатменты', description: 'Имплантационные системы' },
-      { id: 'surgical-kits', name: 'Хирургические наборы', description: 'Наборы для имплантации' },
-      { id: 'osteoplastic-materials', name: 'Остеопластические материалы', description: 'Костный заменитель, мембраны' },
-      { id: 'suture-materials', name: 'Шовный материал', description: 'Материалы для ушивания' },
-      { id: 'anesthetics', name: 'Анестетики', description: 'Местные анестетики' },
-      { id: 'saline', name: 'Физиораствор', description: 'Раствор для промывания' },
-      { id: 'sterile-wipes', name: 'Стерильные салфетки', description: 'Стерильные материалы' },
-      { id: 'antiseptics', name: 'Антисептики', description: 'Антисептические растворы' }
-    ]
+    icon: 'Zap'
   },
   {
     id: 'periodontist',
     name: 'Пародонтолог',
     description: 'Лечение десен, пародонтита',
-    icon: 'Shield',
-    subcategories: [
-      { id: 'scalers', name: 'Скалеры', description: 'Инструменты для удаления зубного камня' },
-      { id: 'ultrasonic-tips', name: 'Ультразвуковые насадки', description: 'Наконечники для ультразвука' },
-      { id: 'curettes', name: 'Кюреты', description: 'Кюреты для пародонтологии' },
-      { id: 'antiseptics', name: 'Антисептики', description: 'Хлоргексидин, перекись' },
-      { id: 'suture-materials', name: 'Шовный материал', description: 'Материалы для ушивания' },
-      { id: 'membranes', name: 'Мембраны', description: 'Мембраны для регенерации' },
-      { id: 'osteoplastic-materials', name: 'Остеопластические материалы', description: 'Материалы для костной пластики' },
-      { id: 'local-antibiotics', name: 'Местные антибиотики', description: 'Антибактериальные препараты' },
-      { id: 'chlorhexidine-gels', name: 'Гели с хлоргексидином', description: 'Гели для лечения десен' },
-      { id: 'anesthetics', name: 'Анестетики', description: 'Местные анестетики' }
-    ]
+    icon: 'Shield'
   },
   {
     id: 'hygienist',
     name: 'Гигиенист',
     description: 'Профгигиена, профилактика',
-    icon: 'Sparkles',
-    subcategories: [
-      { id: 'airflow-powders', name: 'Абразивные порошки для AirFlow', description: 'Порошки для профессиональной гигиены' },
-      { id: 'polishing-pastes', name: 'Пасты для полировки', description: 'Полировочные пасты' },
-      { id: 'brushes-rubber-cups', name: 'Щетки и резинки для наконечников', description: 'Наконечники для полировки' },
-      { id: 'fluoride-varnishes', name: 'Фторсодержащие лаки и гели', description: 'Фторсодержащие препараты' },
-      { id: 'ultrasonic-consumables', name: 'Расходники для ультразвуковых скейлеров', description: 'Наконечники для ультразвука' },
-      { id: 'saliva-ejectors', name: 'Слюноотсосы', description: 'Одноразовые слюноотсосы' },
-      { id: 'disposable-cups-wipes', name: 'Одноразовые стаканы и салфетки', description: 'Одноразовые материалы' }
-    ]
+    icon: 'Sparkles'
   },
   {
     id: 'endodontist',
     name: 'Эндодонтист',
     description: 'Лечение корневых каналов',
-    icon: 'Syringe',
-    subcategories: [
-      { id: 'hand-machine-files', name: 'Файлы ручные и машинные', description: 'Инструменты для обработки каналов' },
-      { id: 'irrigation-solutions', name: 'Ирригационные растворы', description: 'Гипохлорит, EDTA, хлоргексидин' },
-      { id: 'syringes-needles', name: 'Шприцы, иглы', description: 'Инструменты для ирригации' },
-      { id: 'gutta-percha-points', name: 'Гутаперчевые штифты', description: 'Материалы для пломбирования каналов' },
-      { id: 'sealers', name: 'Силеры', description: 'Эпоксидные, кальцийсодержащие' },
-      { id: 'microscopic-consumables', name: 'Микроскопические расходники', description: 'Расходники для микроскопа' }
-    ]
+    icon: 'Syringe'
   }
 ];
 
@@ -160,96 +82,49 @@ export const categories: Category[] = [
     id: 'disposable-instruments',
     name: 'Одноразовые стоматологические инструменты',
     description: 'Одноразовые инструменты для стоматологических процедур',
-    icon: 'Shield',
-    subcategories: [
-      { id: 'mirrors', name: 'Стоматологические зеркала', description: 'Одноразовые зеркала различных размеров' },
-      { id: 'explorers', name: 'Зонды и экскаваторы', description: 'Одноразовые зонды и экскаваторы' },
-      { id: 'tweezers', name: 'Пинцеты', description: 'Одноразовые пинцеты для стоматологии' },
-      { id: 'spatulas', name: 'Шпатели', description: 'Одноразовые шпатели для замешивания' }
-    ]
+    icon: 'Shield'
   },
   {
     id: 'impression-materials',
     name: 'Слепочные массы (альгинатные)',
     description: 'Альгинатные слепочные материалы для снятия оттисков',
-    icon: 'Heart',
-    subcategories: [
-      { id: 'alginate', name: 'Альгинат', description: 'Альгинатные слепочные массы' },
-      { id: 'mixing-bowls', name: 'Чашки для замешивания', description: 'Одноразовые чашки для замешивания' },
-      { id: 'spatulas-mixing', name: 'Шпатели для замешивания', description: 'Шпатели для работы с альгинатом' },
-      { id: 'trays', name: 'Слепочные ложки', description: 'Одноразовые слепочные ложки' }
-    ]
+    icon: 'Heart'
   },
   {
     id: 'dental-burs',
     name: 'Боры стоматологические',
     description: 'Стоматологические боры стандартных размеров',
-    icon: 'Syringe',
-    subcategories: [
-      { id: 'diamond-burs', name: 'Алмазные боры', description: 'Алмазные боры различных форм и размеров' },
-      { id: 'carbide-burs', name: 'Твердосплавные боры', description: 'Твердосплавные боры для препарирования' },
-      { id: 'finishing-burs', name: 'Финишные боры', description: 'Боры для финишной обработки' },
-      { id: 'polishing-burs', name: 'Полировочные боры', description: 'Боры для полировки реставраций' }
-    ]
+    icon: 'Syringe'
   },
   {
     id: 'disposable-tips',
     name: 'Одноразовые наконечники',
     description: 'Одноразовые наконечники для стоматологических инструментов',
-    icon: 'Droplets',
-    subcategories: [
-      { id: 'turbine-tips', name: 'Наконечники для турбины', description: 'Одноразовые наконечники для турбины' },
-      { id: 'contra-angle-tips', name: 'Наконечники для контраугла', description: 'Одноразовые наконечники для контраугла' },
-      { id: 'straight-tips', name: 'Прямые наконечники', description: 'Одноразовые прямые наконечники' },
-      { id: 'prophy-tips', name: 'Наконечники для профгигиены', description: 'Наконечники для профессиональной гигиены' }
-    ]
+    icon: 'Droplets'
   },
   {
     id: 'retraction-cords',
     name: 'Ретракционные нити',
     description: 'Ретракционные нити для работы с десной',
-    icon: 'TestTube',
-    subcategories: [
-      { id: 'plain-cords', name: 'Обычные ретракционные нити', description: 'Стандартные ретракционные нити' },
-      { id: 'impregnated-cords', name: 'Пропитанные нити', description: 'Ретракционные нити с пропиткой' },
-      { id: 'hemostatic-cords', name: 'Гемостатические нити', description: 'Нить с гемостатическим эффектом' },
-      { id: 'sizes', name: 'Различные размеры', description: 'Нить разных диаметров и длин' }
-    ]
+    icon: 'TestTube'
   },
   {
     id: 'dental-materials',
     name: 'Стоматологические материалы',
     description: 'Гели, адгезивы и композитные материалы',
-    icon: 'Droplets',
-    subcategories: [
-      { id: 'etching-gels', name: 'Гели для травления', description: 'Гели для травления эмали и дентина' },
-      { id: 'adhesives', name: 'Адгезивы', description: 'Адгезивные системы для стоматологии' },
-      { id: 'composites', name: 'Композитные материалы', description: 'Композитные материалы для реставраций' },
-      { id: 'air-flow-powders', name: 'Порошки для Air Flow', description: 'Порошки для профессиональной гигиены' }
-    ]
+    icon: 'Droplets'
   },
   {
-    id: 'endodontic-instruments',
-    name: 'Эндодонтические инструменты',
-    description: 'Инструменты для лечения корневых каналов',
-    icon: 'Syringe',
-    subcategories: [
-      { id: 'k-files', name: 'K-Files', description: 'К-файлы для обработки корневых каналов' },
-      { id: 'h-files', name: 'H-Files', description: 'Н-файлы и корневые буравы' },
-      { id: 'rotary-files', name: 'Машинные файлы', description: 'Файлы для машинной обработки' },
-      { id: 'mta-materials', name: 'МТА материалы', description: 'Материалы для пломбирования каналов' }
-    ]
+    id: 'endofiles',
+    name: 'Эндофайлы',
+    description: 'Эндодонтические инструменты для лечения корневых каналов',
+    icon: 'Syringe'
   },
   {
     id: 'isolation-materials',
     name: 'Материалы для изоляции',
     description: 'Раббердам и матрицы для изоляции рабочего поля',
-    icon: 'Shield',
-    subcategories: [
-      { id: 'rubber-dam', name: 'Раббердам', description: 'Коффердам для изоляции зуба' },
-      { id: 'matrices', name: 'Матрицы', description: 'Матрицы для восстановления зубов' },
-      { id: 'sterilization-tapes', name: 'Ленты для стерилизации', description: 'Ленты и материалы для стерилизации' }
-    ]
+    icon: 'Shield'
   }
 ];
 
@@ -690,13 +565,13 @@ export const medicalProducts: MedicalProduct[] = [
   {
     id: 'k-files-15-40-25mm',
     name: 'K.Files №15-40 25мм - 6шт.',
-    category: 'endodontic-instruments',
+    category: 'endofiles',
     subcategory: 'k-files',
     specialization: 'endodontist',
     description: 'Набор К-файлов для ручной обработки корневых каналов. Размеры от №15 до №40, длина 25 мм.',
     price: 250,
-    image: '/images/k-files-set.jpg',
-    images: ['/images/k-files-set.jpg'],
+    image: '/images/k-files-set.svg',
+    images: ['/images/k-files-set.svg'],
     inStock: true,
     stockCount: 60,
     brand: 'EndoTech',
@@ -726,13 +601,13 @@ export const medicalProducts: MedicalProduct[] = [
   {
     id: 'h-files-root-reamers-25mm',
     name: 'H-Files корневые буравы ручные, длина 25 мм, ISO-15-40 6шт',
-    category: 'endodontic-instruments',
+    category: 'endofiles',
     subcategory: 'h-files',
     specialization: 'endodontist',
     description: 'Набор Н-файлов (корневых буравов) для ручной обработки корневых каналов. Размеры ISO 15-40, длина 25 мм.',
     price: 300,
-    image: '/images/h-files-set.jpg',
-    images: ['/images/h-files-set.jpg'],
+    image: '/images/h-files-set.svg',
+    images: ['/images/h-files-set.svg'],
     inStock: true,
     stockCount: 55,
     brand: 'EndoTech',
@@ -762,13 +637,13 @@ export const medicalProducts: MedicalProduct[] = [
   {
     id: 'sc-files-shape-memory',
     name: 'Файлы машинные с памятью формы SC 6шт. (SC-Assorted L25 x6)',
-    category: 'endodontic-instruments',
+    category: 'endofiles',
     subcategory: 'rotary-files',
     specialization: 'endodontist',
     description: 'Набор машинных файлов с памятью формы SC. Обеспечивают эффективную обработку корневых каналов.',
     price: 1970,
-    image: '/images/sc-files-set.jpg',
-    images: ['/images/sc-files-set.jpg'],
+    image: '/images/sc-files-set.svg',
+    images: ['/images/sc-files-set.svg'],
     inStock: true,
     stockCount: 30,
     brand: 'ShapeTech',
@@ -798,7 +673,7 @@ export const medicalProducts: MedicalProduct[] = [
   {
     id: 'mta-canal-material',
     name: 'Канал МТА 3 шт.-материал для устранения дефектов корневых каналов, Омегадент',
-    category: 'endodontic-instruments',
+    category: 'endofiles',
     subcategory: 'mta-materials',
     specialization: 'endodontist',
     description: 'МТА материал для устранения дефектов корневых каналов. Обеспечивает надежное пломбирование и герметизацию.',
@@ -1017,7 +892,7 @@ export const medicalProducts: MedicalProduct[] = [
   {
     id: 'paper-points-taper-02-15',
     name: 'Paper points, taper 02 №15, 200 шт',
-    category: 'endodontic-instruments',
+    category: 'endofiles',
     subcategory: 'gutta-percha-points',
     specialization: 'endodontist',
     description: 'Бумажные штифты taper 02 №15 для пломбирования каналов. Упаковка 200 штук.',
@@ -1053,7 +928,7 @@ export const medicalProducts: MedicalProduct[] = [
   {
     id: 'gutta-percha-points-taper-04-25',
     name: 'Gutta-percha points, taper 04 №25, 60 шт',
-    category: 'endodontic-instruments',
+    category: 'endofiles',
     subcategory: 'gutta-percha-points',
     specialization: 'endodontist',
     description: 'Гутаперчевые штифты taper 04 №25 для пломбирования каналов. Упаковка 60 штук.',
@@ -1423,13 +1298,13 @@ export const medicalProducts: MedicalProduct[] = [
   {
     id: 'd-finders-08-primary-canal',
     name: 'D-Finders №08 - файлы для первичного прохождения канала',
-    category: 'endodontic-instruments',
+    category: 'endofiles',
     subcategory: 'hand-machine-files',
     specialization: 'endodontist',
     description: 'Файлы для первичного прохождения канала D-Finders №08. 1 упаковка - 6 штук.',
     price: 635,
-    image: '/images/k-files-set.jpg',
-    images: ['/images/k-files-set.jpg'],
+    image: '/images/k-files-set.svg',
+    images: ['/images/k-files-set.svg'],
     inStock: true,
     stockCount: 40,
     brand: 'Mani',
@@ -1459,13 +1334,13 @@ export const medicalProducts: MedicalProduct[] = [
   {
     id: 'h-files-hand-canal-reamers-15-40',
     name: 'H-Files - ручные корневые буравы № 15-40 25мм',
-    category: 'endodontic-instruments',
+    category: 'endofiles',
     subcategory: 'h-files',
     specialization: 'endodontist',
     description: 'H-Files - ручные корневые буравы № 15-40, длина 25мм. 1 упаковка - 6 штук.',
     price: 305,
-    image: '/images/h-files-set.jpg',
-    images: ['/images/h-files-set.jpg'],
+    image: '/images/h-files-set.svg',
+    images: ['/images/h-files-set.svg'],
     inStock: true,
     stockCount: 60,
     brand: 'Mani',
@@ -1496,13 +1371,13 @@ export const medicalProducts: MedicalProduct[] = [
   {
     id: 'k-files-15-25mm-hand-reamers',
     name: 'K-Files № 15 25мм - ручные корневые буравы',
-    category: 'endodontic-instruments',
+    category: 'endofiles',
     subcategory: 'k-files',
     specialization: 'endodontist',
     description: 'K-Files № 15, длина 25мм - ручные корневые буравы. 1 упаковка - 6 штук.',
     price: 240,
-    image: '/images/k-files-set.jpg',
-    images: ['/images/k-files-set.jpg'],
+    image: '/images/k-files-set.svg',
+    images: ['/images/k-files-set.svg'],
     inStock: true,
     stockCount: 70,
     brand: 'Mani',
@@ -1533,13 +1408,13 @@ export const medicalProducts: MedicalProduct[] = [
   {
     id: 'peeso-reamers-machine-drills-1-28mm',
     name: 'Peeso Reamers - машинные сверла №1 28мм',
-    category: 'endodontic-instruments',
+    category: 'endofiles',
     subcategory: 'rotary-files',
     specialization: 'endodontist',
     description: 'Peeso Reamers - машинные сверла №1, длина 28мм. 1 упаковка - 6 штук.',
     price: 740,
-    image: '/images/sc-files-set.jpg',
-    images: ['/images/sc-files-set.jpg'],
+    image: '/images/sc-files-set.svg',
+    images: ['/images/sc-files-set.svg'],
     inStock: true,
     stockCount: 35,
     brand: 'Mani',
@@ -1570,7 +1445,7 @@ export const medicalProducts: MedicalProduct[] = [
   {
     id: 'spreaders-gutta-percha-instrument-15-25mm',
     name: 'Spreaders - инструмент для работы с гутаперчей №15 25мм',
-    category: 'endodontic-instruments',
+    category: 'endofiles',
     subcategory: 'gutta-percha-points',
     specialization: 'endodontist',
     description: 'Spreaders - инструмент для работы с гутаперчей №15, длина 25мм. 1 упаковка - 6 штук.',
@@ -1607,13 +1482,13 @@ export const medicalProducts: MedicalProduct[] = [
   {
     id: 'ultrasonic-files-40-machine-drills',
     name: 'Ultrasonic Files - машинные сверла для ультразвуковой обработки каналов №40',
-    category: 'endodontic-instruments',
+    category: 'endofiles',
     subcategory: 'rotary-files',
     specialization: 'endodontist',
     description: 'Ultrasonic Files - машинные сверла для ультразвуковой обработки каналов №40. 1 упаковка - 6 штук.',
     price: 435,
-    image: '/images/sc-files-set.jpg',
-    images: ['/images/sc-files-set.jpg'],
+    image: '/images/sc-files-set.svg',
+    images: ['/images/sc-files-set.svg'],
     inStock: true,
     stockCount: 45,
     brand: 'Mani',

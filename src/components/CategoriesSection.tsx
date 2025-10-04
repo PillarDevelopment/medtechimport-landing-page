@@ -52,19 +52,6 @@ export default function CategoriesSection() {
                   {category.description}
                 </p>
                 
-                <div className="space-y-2">
-                  {category.subcategories.slice(0, 3).map((subcategory) => (
-                    <div key={subcategory.id} className="flex items-center text-sm text-gray-500">
-                      <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></div>
-                      {subcategory.name}
-                    </div>
-                  ))}
-                  {category.subcategories.length > 3 && (
-                    <div className="text-sm text-blue-600 font-medium">
-                      +{category.subcategories.length - 3} еще
-                    </div>
-                  )}
-                </div>
               </Link>
             )
           })}

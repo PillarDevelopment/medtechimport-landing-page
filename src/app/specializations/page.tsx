@@ -64,24 +64,6 @@ export default function SpecializationsPage() {
                 
                 <p className="text-gray-600 mb-4">{specialization.description}</p>
                 
-                <div className="space-y-2">
-                  <h4 className="text-sm font-medium text-gray-900">Основные расходники:</h4>
-                  <div className="flex flex-wrap gap-1">
-                    {specialization.subcategories.slice(0, 3).map((subcategory) => (
-                      <span
-                        key={subcategory.id}
-                        className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full"
-                      >
-                        {subcategory.name}
-                      </span>
-                    ))}
-                    {specialization.subcategories.length > 3 && (
-                      <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">
-                        +{specialization.subcategories.length - 3} еще
-                      </span>
-                    )}
-                  </div>
-                </div>
               </Link>
             )
           })}
