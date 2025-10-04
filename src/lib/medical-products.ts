@@ -866,6 +866,779 @@ export const medicalProducts: MedicalProduct[] = [
     certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
     rating: 4.9,
     reviews: 187
+  },
+  // БОРЫ
+  {
+    id: 'bc31c-diamond-bur',
+    name: 'BC31C - Алмазный бор для турбины',
+    category: 'dental-burs',
+    subcategory: 'diamond-burs',
+    specialization: 'therapist',
+    description: 'Алмазный бор BC31C для турбины. Высокое качество алмазного покрытия обеспечивает эффективное препарирование.',
+    price: 690,
+    image: '/images/dental-burs.jpg',
+    images: ['/images/dental-burs.jpg'],
+    inStock: true,
+    stockCount: 50,
+    brand: 'Mani',
+    specifications: {
+      'Тип': 'Алмазный бор',
+      'Форма': 'BC31C',
+      'Упаковка': '1 упаковка - 5 штук',
+      'Хвостовик': '2.35 мм',
+      'Назначение': 'Турбина'
+    },
+    features: [
+      'Высокое качество алмазов',
+      'Эффективное препарирование',
+      'Долговечность',
+      'Минимальный нагрев'
+    ],
+    applications: [
+      'Препарирование кариеса',
+      'Формирование полостей',
+      'Обработка эмали',
+      'Подготовка под пломбы'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
+    rating: 4.7,
+    reviews: 89
+  },
+  {
+    id: 'cd50f-diamond-bur',
+    name: 'CD50F - Алмазный бор для турбины',
+    category: 'dental-burs',
+    subcategory: 'diamond-burs',
+    specialization: 'therapist',
+    description: 'Алмазный бор CD50F для турбины. Обеспечивает точное препарирование и формирование полостей.',
+    price: 650,
+    image: '/images/dental-burs.jpg',
+    images: ['/images/dental-burs.jpg'],
+    inStock: true,
+    stockCount: 45,
+    brand: 'Mani',
+    specifications: {
+      'Тип': 'Алмазный бор',
+      'Форма': 'CD50F',
+      'Упаковка': '1 упаковка - 5 штук',
+      'Хвостовик': '2.35 мм',
+      'Назначение': 'Турбина'
+    },
+    features: [
+      'Точное препарирование',
+      'Высокое качество',
+      'Долговечность',
+      'Эффективность'
+    ],
+    applications: [
+      'Препарирование кариеса',
+      'Формирование полостей',
+      'Обработка эмали',
+      'Подготовка под пломбы'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
+    rating: 4.6,
+    reviews: 76
+  },
+  {
+    id: 'carbide-bur-701',
+    name: 'Твердосплавный бор №701',
+    category: 'dental-burs',
+    subcategory: 'carbide-burs',
+    specialization: 'therapist',
+    description: 'Твердосплавный бор №701 для препарирования. Высокая прочность и долговечность.',
+    price: 1355,
+    image: '/images/dental-burs.jpg',
+    images: ['/images/dental-burs.jpg'],
+    inStock: true,
+    stockCount: 30,
+    brand: 'Mani',
+    specifications: {
+      'Тип': 'Твердосплавный бор',
+      'Номер': '701',
+      'Упаковка': '1 упаковка - 5 штук',
+      'Хвостовик': '2.35 мм',
+      'Материал': 'Твердый сплав'
+    },
+    features: [
+      'Высокая прочность',
+      'Долговечность',
+      'Точное препарирование',
+      'Надежность'
+    ],
+    applications: [
+      'Препарирование кариеса',
+      'Формирование полостей',
+      'Обработка дентина',
+      'Подготовка под пломбы'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
+    rating: 4.8,
+    reviews: 112
+  },
+  // ИЗГОТОВЛЕНИЕ И ВРЕМЕННАЯ ФИКСАЦИЯ КОРОНОК И МОСТОВ
+  {
+    id: 'freegenol-temporary-pack-cement',
+    name: 'Freegenol Temporary Pack-cement для временной фиксации',
+    category: 'dental-materials',
+    subcategory: 'temporary-materials',
+    specialization: 'orthopedist',
+    description: 'Временный цемент для фиксации коронок и мостов. Включает цемент 55г+20г и очиститель 2.5мл.',
+    price: 5750,
+    image: '/images/dental-materials.jpg',
+    images: ['/images/dental-materials.jpg'],
+    inStock: true,
+    stockCount: 15,
+    brand: 'GC',
+    specifications: {
+      'Код': '003440',
+      'Назначение': 'Временная фиксация',
+      'Состав': '55г+20г цемент + 2.5мл очиститель',
+      'Тип': 'Временный цемент',
+      'Производитель': 'GC'
+    },
+    features: [
+      'Надежная временная фиксация',
+      'Легкое удаление',
+      'Биосовместимость',
+      'Удобство использования'
+    ],
+    applications: [
+      'Временная фиксация коронок',
+      'Временная фиксация мостов',
+      'Тестирование протезов',
+      'Промежуточные этапы лечения'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
+    rating: 4.6,
+    reviews: 67
+  },
+  // ПЛОМБИРОВАНИЕ КАНАЛОВ
+  {
+    id: 'paper-points-taper-02-15',
+    name: 'Paper points, taper 02 №15, 200 шт',
+    category: 'endodontic-instruments',
+    subcategory: 'gutta-percha-points',
+    specialization: 'endodontist',
+    description: 'Бумажные штифты taper 02 №15 для пломбирования каналов. Упаковка 200 штук.',
+    price: 245,
+    image: '/images/endodontic-instruments.jpg',
+    images: ['/images/endodontic-instruments.jpg'],
+    inStock: true,
+    stockCount: 80,
+    brand: 'Diadent',
+    specifications: {
+      'Код': '0390105Dm.15',
+      'Тип': 'Paper points',
+      'Taper': '02',
+      'Размер': '№15',
+      'Количество': '200 штук'
+    },
+    features: [
+      'Высокая впитывающая способность',
+      'Точные размеры',
+      'Стерильность',
+      'Надежность'
+    ],
+    applications: [
+      'Осушение каналов',
+      'Пломбирование каналов',
+      'Эндодонтическое лечение',
+      'Подготовка к обтурации'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
+    rating: 4.5,
+    reviews: 89
+  },
+  {
+    id: 'gutta-percha-points-taper-04-25',
+    name: 'Gutta-percha points, taper 04 №25, 60 шт',
+    category: 'endodontic-instruments',
+    subcategory: 'gutta-percha-points',
+    specialization: 'endodontist',
+    description: 'Гутаперчевые штифты taper 04 №25 для пломбирования каналов. Упаковка 60 штук.',
+    price: 900,
+    image: '/images/endodontic-instruments.jpg',
+    images: ['/images/endodontic-instruments.jpg'],
+    inStock: true,
+    stockCount: 60,
+    brand: 'Diadent',
+    specifications: {
+      'Код': '04.25gut',
+      'Тип': 'Gutta-percha points',
+      'Taper': '04',
+      'Размер': '№25',
+      'Количество': '60 штук',
+      'Единица измерения': 'миллиметр'
+    },
+    features: [
+      'Высокое качество гутаперчи',
+      'Точные размеры',
+      'Стерильность',
+      'Надежная обтурация'
+    ],
+    applications: [
+      'Пломбирование каналов',
+      'Эндодонтическое лечение',
+      'Обтурация корневых каналов',
+      'Завершение эндодонтического лечения'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
+    rating: 4.7,
+    reviews: 124
+  },
+  // ПЛОМБИРОВАНИЕ СВЕТОВОГО ОТВЕРЖДЕНИЯ
+  {
+    id: 'gaenial-posterior-a3-composite',
+    name: 'G-aenial Posterior A3 реставрационный композит',
+    category: 'dental-materials',
+    subcategory: 'composites',
+    specialization: 'therapist',
+    description: 'Реставрационный композит G-aenial Posterior A3 для жевательных зубов. 1 шприц 5.5г.',
+    price: 3510,
+    image: '/images/gradia-direct-anterior.jpg',
+    images: ['/images/gradia-direct-anterior.jpg'],
+    inStock: true,
+    stockCount: 25,
+    brand: 'GC',
+    specifications: {
+      'Код': '004701',
+      'Тип': 'Реставрационный композит',
+      'Цвет': 'A3',
+      'Назначение': 'Жевательные зубы',
+      'Форма выпуска': '1 шприц 5.5г',
+      'Производитель': 'GC (Japan)'
+    },
+    features: [
+      'Высокая прочность',
+      'Отличная эстетика',
+      'Светоотверждение',
+      'Долговечность'
+    ],
+    applications: [
+      'Реставрация жевательных зубов',
+      'Пломбирование полостей',
+      'Восстановление формы',
+      'Функциональные реставрации'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
+    rating: 4.8,
+    reviews: 156
+  },
+  {
+    id: 'gradia-direct-anterior-a3-hybrid',
+    name: 'Gradia Direct Anterior A3 гибридный композит',
+    category: 'dental-materials',
+    subcategory: 'composites',
+    specialization: 'therapist',
+    description: 'Гибридный композит Gradia Direct Anterior A3 для передних зубов. 1 шприц 4г.',
+    price: 2655,
+    image: '/images/gradia-direct-anterior.jpg',
+    images: ['/images/gradia-direct-anterior.jpg'],
+    inStock: true,
+    stockCount: 30,
+    brand: 'GC',
+    specifications: {
+      'Код': '003364',
+      'Тип': 'Гибридный композит',
+      'Цвет': 'A3',
+      'Назначение': 'Передние зубы',
+      'Форма выпуска': '1 шприц 4г',
+      'Производитель': 'GC (Japan)'
+    },
+    features: [
+      'Отличная эстетика',
+      'Высокая прочность',
+      'Светоотверждение',
+      'Легкость полировки'
+    ],
+    applications: [
+      'Реставрация передних зубов',
+      'Эстетические реставрации',
+      'Восстановление формы',
+      'Косметическая стоматология'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
+    rating: 4.9,
+    reviews: 198
+  },
+  {
+    id: 'gradia-direct-flo-a3-flowable',
+    name: 'Gradia Direct Flo A3 гибридный текучий композит',
+    category: 'dental-materials',
+    subcategory: 'composites',
+    specialization: 'therapist',
+    description: 'Гибридный текучий композит Gradia Direct Flo A3. 2 шприца по 1.5г.',
+    price: 3385,
+    image: '/images/gradia-direct-anterior.jpg',
+    images: ['/images/gradia-direct-anterior.jpg'],
+    inStock: true,
+    stockCount: 20,
+    brand: 'GC',
+    specifications: {
+      'Код': '0110227.A3/GC003443',
+      'Тип': 'Гибридный текучий композит',
+      'Цвет': 'A3',
+      'Форма выпуска': '2 шприца по 1.5г',
+      'Производитель': 'GC (Japan)'
+    },
+    features: [
+      'Текучая консистенция',
+      'Отличная адгезия',
+      'Светоотверждение',
+      'Высокая эстетика'
+    ],
+    applications: [
+      'Реставрация небольших полостей',
+      'Герметизация фиссур',
+      'Восстановление контуров',
+      'Эстетические реставрации'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
+    rating: 4.7,
+    reviews: 134
+  },
+  // ПЛОМБИРОВАНИЕ ХИМИЧЕСКОГО ОТВЕРЖДЕНИЯ
+  {
+    id: 'cocoa-butter-separation-agent',
+    name: 'Какао-масло агент для разделения',
+    category: 'dental-materials',
+    subcategory: 'temporary-materials',
+    specialization: 'therapist',
+    description: 'Какао-масло агент для разделения, 10г. Используется для предотвращения прилипания материалов.',
+    price: 1795,
+    image: '/images/dental-materials.jpg',
+    images: ['/images/dental-materials.jpg'],
+    inStock: true,
+    stockCount: 40,
+    brand: 'GC',
+    specifications: {
+      'Код': '000387',
+      'Тип': 'Агент для разделения',
+      'Состав': 'Какао-масло',
+      'Вес': '10г',
+      'Производитель': 'GC (Japan)'
+    },
+    features: [
+      'Натуральный состав',
+      'Эффективное разделение',
+      'Безопасность',
+      'Легкость применения'
+    ],
+    applications: [
+      'Предотвращение прилипания',
+      'Разделение материалов',
+      'Стоматологические процедуры',
+      'Лабораторные работы'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
+    rating: 4.5,
+    reviews: 67
+  },
+  {
+    id: 'fuji-ix-a3-fluoride-cement',
+    name: 'Fuji IX A3 фторвыделяющий реставрационный цемент',
+    category: 'dental-materials',
+    subcategory: 'glass-ionomers',
+    specialization: 'therapist',
+    description: 'Фторвыделяющий реставрационный цемент Fuji IX A3. 15г+8г.',
+    price: 5150,
+    image: '/images/dental-materials.jpg',
+    images: ['/images/dental-materials.jpg'],
+    inStock: true,
+    stockCount: 20,
+    brand: 'GC',
+    specifications: {
+      'Код': '003264',
+      'Тип': 'Фторвыделяющий реставрационный цемент',
+      'Цвет': 'A3',
+      'Состав': '15г+8г',
+      'Производитель': 'GC'
+    },
+    features: [
+      'Фторвыделение',
+      'Химическое отверждение',
+      'Высокая прочность',
+      'Биосовместимость'
+    ],
+    applications: [
+      'Реставрация зубов',
+      'Пломбирование полостей',
+      'Восстановление формы',
+      'Профилактика кариеса'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
+    rating: 4.6,
+    reviews: 98
+  },
+  {
+    id: 'epitex-refill-coarse-blue',
+    name: 'Epitex Refill Coarse, грубый, синий',
+    category: 'dental-materials',
+    subcategory: 'polishing-materials',
+    specialization: 'hygienist',
+    description: 'Epitex Refill Coarse, грубый, синий. Картридж 10м.',
+    price: 3205,
+    image: '/images/dental-materials.jpg',
+    images: ['/images/dental-materials.jpg'],
+    inStock: true,
+    stockCount: 15,
+    brand: 'GC',
+    specifications: {
+      'Код': '000405',
+      'Тип': 'Epitex Refill Coarse',
+      'Зернистость': 'Грубый',
+      'Цвет': 'Синий',
+      'Форма выпуска': 'Картридж 10м',
+      'Производитель': 'GC (Japan)'
+    },
+    features: [
+      'Грубая зернистость',
+      'Эффективная полировка',
+      'Долговечность',
+      'Удобство использования'
+    ],
+    applications: [
+      'Полировка реставраций',
+      'Финишная обработка',
+      'Профессиональная гигиена',
+      'Восстановление блеска'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
+    rating: 4.7,
+    reviews: 76
+  },
+  {
+    id: 'metal-strips-red-200',
+    name: 'Metal Strips - металлические полоски, красные №200',
+    category: 'isolation-materials',
+    subcategory: 'matrices',
+    specialization: 'therapist',
+    description: 'Металлические полоски красные №200. 1 упаковка - 12 штук.',
+    price: 10845,
+    image: '/images/contour-matrices.jpg',
+    images: ['/images/contour-matrices.jpg'],
+    inStock: true,
+    stockCount: 10,
+    brand: 'GC',
+    specifications: {
+      'Код': '004848/0940284',
+      'Тип': 'Metal Strips',
+      'Цвет': 'Красный',
+      'Размер': '№200',
+      'Упаковка': '1 упаковка - 12 штук',
+      'Производитель': 'GC'
+    },
+    features: [
+      'Высокая прочность',
+      'Точные размеры',
+      'Многоразовое использование',
+      'Надежность'
+    ],
+    applications: [
+      'Восстановление контактов',
+      'Реставрационные работы',
+      'Формирование полостей',
+      'Пломбирование'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
+    rating: 4.8,
+    reviews: 89
+  },
+  // ПОСТОЯННАЯ ФИКСАЦИЯ КОРОНОК И МОСТОВ
+  {
+    id: 'fuji-plus-liquid-glass-ionomer',
+    name: 'Fuji Plus Liquid - стеклоиономерный цемент для постоянной фиксации',
+    category: 'dental-materials',
+    subcategory: 'cements',
+    specialization: 'orthopedist',
+    description: 'Стеклоиономерный цемент для постоянной фиксации коронок и мостов. 7мл.',
+    price: 4705,
+    image: '/images/dental-materials.jpg',
+    images: ['/images/dental-materials.jpg'],
+    inStock: true,
+    stockCount: 18,
+    brand: 'GC',
+    specifications: {
+      'Код': '0130044/003215',
+      'Тип': 'Стеклоиономерный цемент',
+      'Назначение': 'Постоянная фиксация',
+      'Объем': '7мл',
+      'Производитель': 'GC (Japan)'
+    },
+    features: [
+      'Надежная постоянная фиксация',
+      'Фторвыделение',
+      'Биосовместимость',
+      'Долговечность'
+    ],
+    applications: [
+      'Постоянная фиксация коронок',
+      'Постоянная фиксация мостов',
+      'Фиксация вкладок',
+      'Протезирование'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
+    rating: 4.7,
+    reviews: 112
+  },
+  // СЛЕПОЧНЫЕ МАТЕРИАЛЫ И АКСЕССУАРЫ
+  {
+    id: 'functional-sticks-iso-thermoplastic',
+    name: 'Functional Sticks ISO функциональные термопластические палочки',
+    category: 'impression-materials',
+    subcategory: 'alginate',
+    specialization: 'orthopedist',
+    description: 'Функциональные термопластические палочки ISO. 120г.',
+    price: 5300,
+    image: '/images/alginate-material.jpg',
+    images: ['/images/alginate-material.jpg'],
+    inStock: true,
+    stockCount: 12,
+    brand: 'GC',
+    specifications: {
+      'Код': '000043/0930140',
+      'Тип': 'Functional Sticks ISO',
+      'Назначение': 'Функциональные термопластические палочки',
+      'Вес': '120г',
+      'Производитель': 'GC'
+    },
+    features: [
+      'Термопластичность',
+      'Функциональность',
+      'Точность оттисков',
+      'Удобство использования'
+    ],
+    applications: [
+      'Снятие функциональных оттисков',
+      'Изготовление протезов',
+      'Ортодонтическое лечение',
+      'Диагностические модели'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
+    rating: 4.6,
+    reviews: 78
+  },
+  // ЭНДОДОНТИЧЕСКИЕ ИНСТРУМЕНТЫ И АКСЕССУАРЫ
+  {
+    id: 'd-finders-08-primary-canal',
+    name: 'D-Finders №08 - файлы для первичного прохождения канала',
+    category: 'endodontic-instruments',
+    subcategory: 'hand-machine-files',
+    specialization: 'endodontist',
+    description: 'Файлы для первичного прохождения канала D-Finders №08. 1 упаковка - 6 штук.',
+    price: 635,
+    image: '/images/k-files-set.jpg',
+    images: ['/images/k-files-set.jpg'],
+    inStock: true,
+    stockCount: 40,
+    brand: 'Mani',
+    specifications: {
+      'Код': 'D-Finders- №08',
+      'Тип': 'Файлы для первичного прохождения канала',
+      'Размер': '№08',
+      'Упаковка': '1 упаковка - 6 штук',
+      'Производитель': 'Mani'
+    },
+    features: [
+      'Эффективное прохождение каналов',
+      'Высокое качество',
+      'Надежность',
+      'Точность'
+    ],
+    applications: [
+      'Первичное прохождение каналов',
+      'Эндодонтическое лечение',
+      'Обработка корневых каналов',
+      'Подготовка к пломбированию'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
+    rating: 4.7,
+    reviews: 95
+  },
+  {
+    id: 'h-files-hand-canal-reamers-15-40',
+    name: 'H-Files - ручные корневые буравы № 15-40 25мм',
+    category: 'endodontic-instruments',
+    subcategory: 'h-files',
+    specialization: 'endodontist',
+    description: 'H-Files - ручные корневые буравы № 15-40, длина 25мм. 1 упаковка - 6 штук.',
+    price: 305,
+    image: '/images/h-files-set.jpg',
+    images: ['/images/h-files-set.jpg'],
+    inStock: true,
+    stockCount: 60,
+    brand: 'Mani',
+    specifications: {
+      'Код': '0332014',
+      'Тип': 'H-Files - ручные корневые буравы',
+      'Размеры': '№ 15-40',
+      'Длина': '25мм',
+      'Упаковка': '1 упаковка - 6 штук',
+      'Производитель': 'Mani'
+    },
+    features: [
+      'Эффективная обработка каналов',
+      'Прочная конструкция',
+      'Точные размеры',
+      'Удобная рукоятка'
+    ],
+    applications: [
+      'Обработка корневых каналов',
+      'Удаление дентина',
+      'Расширение каналов',
+      'Эндодонтическое лечение'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
+    rating: 4.6,
+    reviews: 87
+  },
+  {
+    id: 'k-files-15-25mm-hand-reamers',
+    name: 'K-Files № 15 25мм - ручные корневые буравы',
+    category: 'endodontic-instruments',
+    subcategory: 'k-files',
+    specialization: 'endodontist',
+    description: 'K-Files № 15, длина 25мм - ручные корневые буравы. 1 упаковка - 6 штук.',
+    price: 240,
+    image: '/images/k-files-set.jpg',
+    images: ['/images/k-files-set.jpg'],
+    inStock: true,
+    stockCount: 70,
+    brand: 'Mani',
+    specifications: {
+      'Код': '0322004',
+      'Тип': 'K-Files - ручные корневые буравы',
+      'Размер': '№ 15',
+      'Длина': '25мм',
+      'Упаковка': '1 упаковка - 6 штук',
+      'Производитель': 'Mani'
+    },
+    features: [
+      'Высокое качество стали',
+      'Точная калибровка',
+      'Надежная фиксация',
+      'Долговечность'
+    ],
+    applications: [
+      'Обработка корневых каналов',
+      'Эндодонтическое лечение',
+      'Расширение каналов',
+      'Подготовка к пломбированию'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
+    rating: 4.5,
+    reviews: 76
+  },
+  {
+    id: 'peeso-reamers-machine-drills-1-28mm',
+    name: 'Peeso Reamers - машинные сверла №1 28мм',
+    category: 'endodontic-instruments',
+    subcategory: 'rotary-files',
+    specialization: 'endodontist',
+    description: 'Peeso Reamers - машинные сверла №1, длина 28мм. 1 упаковка - 6 штук.',
+    price: 740,
+    image: '/images/sc-files-set.jpg',
+    images: ['/images/sc-files-set.jpg'],
+    inStock: true,
+    stockCount: 35,
+    brand: 'Mani',
+    specifications: {
+      'Код': '0371015',
+      'Тип': 'Peeso Reamers - машинные сверла',
+      'Размер': '№1',
+      'Длина': '28мм',
+      'Упаковка': '1 упаковка - 6 штук',
+      'Производитель': 'Mani'
+    },
+    features: [
+      'Машинная обработка',
+      'Высокая эффективность',
+      'Прочность',
+      'Точность'
+    ],
+    applications: [
+      'Машинная обработка каналов',
+      'Эндодонтическое лечение',
+      'Расширение каналов',
+      'Профессиональная эндодонтия'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
+    rating: 4.8,
+    reviews: 103
+  },
+  {
+    id: 'spreaders-gutta-percha-instrument-15-25mm',
+    name: 'Spreaders - инструмент для работы с гутаперчей №15 25мм',
+    category: 'endodontic-instruments',
+    subcategory: 'gutta-percha-points',
+    specialization: 'endodontist',
+    description: 'Spreaders - инструмент для работы с гутаперчей №15, длина 25мм. 1 упаковка - 6 штук.',
+    price: 435,
+    image: '/images/endodontic-instruments.jpg',
+    images: ['/images/endodontic-instruments.jpg'],
+    inStock: true,
+    stockCount: 50,
+    brand: 'Mani',
+    specifications: {
+      'Код': '0390190',
+      'Тип': 'Spreaders - инструмент для работы с гутаперчей',
+      'Размер': '№15',
+      'Длина': '25мм',
+      'Упаковка': '1 упаковка - 6 штук',
+      'Производитель': 'Mani'
+    },
+    features: [
+      'Эффективная работа с гутаперчей',
+      'Точные размеры',
+      'Прочность',
+      'Удобство использования'
+    ],
+    applications: [
+      'Работа с гутаперчей',
+      'Пломбирование каналов',
+      'Эндодонтическое лечение',
+      'Обтурация каналов'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
+    rating: 4.6,
+    reviews: 82
+  },
+  {
+    id: 'ultrasonic-files-40-machine-drills',
+    name: 'Ultrasonic Files - машинные сверла для ультразвуковой обработки каналов №40',
+    category: 'endodontic-instruments',
+    subcategory: 'rotary-files',
+    specialization: 'endodontist',
+    description: 'Ultrasonic Files - машинные сверла для ультразвуковой обработки каналов №40. 1 упаковка - 6 штук.',
+    price: 435,
+    image: '/images/sc-files-set.jpg',
+    images: ['/images/sc-files-set.jpg'],
+    inStock: true,
+    stockCount: 45,
+    brand: 'Mani',
+    specifications: {
+      'Код': '0391007',
+      'Тип': 'Ultrasonic Files - машинные сверла для ультразвуковой обработки каналов',
+      'Размер': '№40',
+      'Упаковка': '1 упаковка - 6 штук',
+      'Производитель': 'Mani'
+    },
+    features: [
+      'Ультразвуковая обработка',
+      'Высокая эффективность',
+      'Безопасность',
+      'Точность'
+    ],
+    applications: [
+      'Ультразвуковая обработка каналов',
+      'Эндодонтическое лечение',
+      'Очистка каналов',
+      'Профессиональная эндодонтия'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
+    rating: 4.7,
+    reviews: 91
   }
 ];
 
