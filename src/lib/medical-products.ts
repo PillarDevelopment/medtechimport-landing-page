@@ -125,6 +125,36 @@ export const categories: Category[] = [
     name: 'Материалы для изоляции',
     description: 'Раббердам и матрицы для изоляции рабочего поля',
     icon: 'Shield'
+  },
+  {
+    id: 'sterilization-indicators',
+    name: 'Индикаторы стерилизации',
+    description: 'Индикаторы для контроля процесса стерилизации',
+    icon: 'Activity'
+  },
+  {
+    id: 'thermo-sealing-equipment',
+    name: 'Термосварочные аппараты',
+    description: 'Оборудование для термосварки упаковочных материалов',
+    icon: 'Zap'
+  },
+  {
+    id: 'sterilization-packages',
+    name: 'Плоские пакеты для стерилизации',
+    description: 'Плоские пакеты для упаковки инструментов перед стерилизацией',
+    icon: 'Package'
+  },
+  {
+    id: 'sterilization-rolls',
+    name: 'Рулоны для стерилизации',
+    description: 'Рулоны упаковочных материалов для стерилизации',
+    icon: 'RotateCcw'
+  },
+  {
+    id: 'wrapping-materials',
+    name: 'Оберточные материалы',
+    description: 'Материалы для обертывания инструментов перед стерилизацией',
+    icon: 'Layers'
   }
 ];
 
@@ -1514,6 +1544,371 @@ export const medicalProducts: MedicalProduct[] = [
     certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
     rating: 4.7,
     reviews: 91
+  },
+  // ИНДИКАТОРЫ СТЕРИЛИЗАЦИИ
+  {
+    id: 'sterilization-indicator-tape-18mm',
+    name: 'Индикаторная лента для стерилизации 18мм x 50м',
+    category: 'sterilization-indicators',
+    subcategory: 'indicator-tape',
+    specialization: 'surgeon',
+    description: 'Индикаторная лента для контроля стерилизации. Меняет цвет при достижении необходимой температуры.',
+    price: 450,
+    image: '/images/sterilization-indicator.jpg',
+    images: ['/images/sterilization-indicator.jpg'],
+    inStock: true,
+    stockCount: 100,
+    brand: 'Клинипак',
+    specifications: {
+      'Ширина': '18 мм',
+      'Длина': '50 м',
+      'Тип': 'Индикаторная лента',
+      'Температура активации': '121°C',
+      'Цвет': 'Бежевый → коричневый'
+    },
+    features: [
+      'Визуальный контроль стерилизации',
+      'Надежная индикация',
+      'Легкое применение',
+      'Соответствие стандартам'
+    ],
+    applications: [
+      'Контроль стерилизации',
+      'Упаковка инструментов',
+      'Соблюдение протоколов',
+      'Документирование процесса'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'ISO 11140'],
+    rating: 4.8,
+    reviews: 156
+  },
+  {
+    id: 'chemical-indicator-strips-100',
+    name: 'Химические индикаторные полоски 100 шт',
+    category: 'sterilization-indicators',
+    subcategory: 'chemical-indicators',
+    specialization: 'surgeon',
+    description: 'Химические индикаторные полоски для контроля стерилизации в автоклаве.',
+    price: 1200,
+    image: '/images/chemical-indicator.jpg',
+    images: ['/images/chemical-indicator.jpg'],
+    inStock: true,
+    stockCount: 50,
+    brand: 'Клинипак',
+    specifications: {
+      'Количество': '100 штук',
+      'Тип': 'Химический индикатор',
+      'Температура': '121°C / 134°C',
+      'Время': '15-20 минут',
+      'Упаковка': 'Герметичная'
+    },
+    features: [
+      'Точная индикация',
+      'Быстрая реакция',
+      'Надежность',
+      'Простота использования'
+    ],
+    applications: [
+      'Контроль автоклавирования',
+      'Проверка стерилизации',
+      'Качество обработки',
+      'Протоколы безопасности'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'ISO 11140'],
+    rating: 4.9,
+    reviews: 89
+  },
+  // ТЕРМОСВАРОЧНЫЕ АППАРАТЫ
+  {
+    id: 'thermo-sealer-compact-300mm',
+    name: 'Термосварочный аппарат компактный 300мм',
+    category: 'thermo-sealing-equipment',
+    subcategory: 'thermo-sealers',
+    specialization: 'surgeon',
+    description: 'Компактный термосварочный аппарат для упаковки инструментов перед стерилизацией.',
+    price: 25000,
+    image: '/images/thermo-sealer.jpg',
+    images: ['/images/thermo-sealer.jpg'],
+    inStock: true,
+    stockCount: 5,
+    brand: 'Клинипак',
+    specifications: {
+      'Ширина сварки': '300 мм',
+      'Температура': '150-200°C',
+      'Мощность': '800 Вт',
+      'Размеры': '400x200x150 мм',
+      'Вес': '3.5 кг'
+    },
+    features: [
+      'Компактные размеры',
+      'Надежная сварка',
+      'Простота использования',
+      'Энергоэффективность'
+    ],
+    applications: [
+      'Упаковка инструментов',
+      'Подготовка к стерилизации',
+      'Создание герметичных пакетов',
+      'Организация рабочего места'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'ISO 11607'],
+    rating: 4.7,
+    reviews: 23
+  },
+  {
+    id: 'thermo-sealer-professional-500mm',
+    name: 'Термосварочный аппарат профессиональный 500мм',
+    category: 'thermo-sealing-equipment',
+    subcategory: 'thermo-sealers',
+    specialization: 'surgeon',
+    description: 'Профессиональный термосварочный аппарат для больших объемов упаковки.',
+    price: 45000,
+    image: '/images/thermo-sealer-pro.jpg',
+    images: ['/images/thermo-sealer-pro.jpg'],
+    inStock: true,
+    stockCount: 3,
+    brand: 'Клинипак',
+    specifications: {
+      'Ширина сварки': '500 мм',
+      'Температура': '150-250°C',
+      'Мощность': '1500 Вт',
+      'Размеры': '600x300x200 мм',
+      'Вес': '8 кг'
+    },
+    features: [
+      'Высокая производительность',
+      'Профессиональное качество',
+      'Надежность',
+      'Долговечность'
+    ],
+    applications: [
+      'Массовая упаковка',
+      'Профессиональная стерилизация',
+      'Клиники и больницы',
+      'Стоматологические центры'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'ISO 11607'],
+    rating: 4.8,
+    reviews: 15
+  },
+  // ПЛОСКИЕ ПАКЕТЫ ДЛЯ СТЕРИЛИЗАЦИИ
+  {
+    id: 'sterilization-pouches-small-100x150',
+    name: 'Плоские пакеты для стерилизации 100x150мм 100шт',
+    category: 'sterilization-packages',
+    subcategory: 'sterilization-pouches',
+    specialization: 'surgeon',
+    description: 'Плоские пакеты для стерилизации инструментов. Размер 100x150мм, упаковка 100 штук.',
+    price: 850,
+    image: '/images/sterilization-pouches.jpg',
+    images: ['/images/sterilization-pouches.jpg'],
+    inStock: true,
+    stockCount: 200,
+    brand: 'Клинипак',
+    specifications: {
+      'Размер': '100x150 мм',
+      'Количество': '100 штук',
+      'Материал': 'Бумага + пленка',
+      'Температура': 'До 180°C',
+      'Тип': 'Плоские пакеты'
+    },
+    features: [
+      'Надежная герметизация',
+      'Высокая прочность',
+      'Индикация стерилизации',
+      'Удобство использования'
+    ],
+    applications: [
+      'Упаковка мелких инструментов',
+      'Стерилизация в автоклаве',
+      'Организация инструментов',
+      'Соблюдение протоколов'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'ISO 11607'],
+    rating: 4.6,
+    reviews: 134
+  },
+  {
+    id: 'sterilization-pouches-large-200x300',
+    name: 'Плоские пакеты для стерилизации 200x300мм 50шт',
+    category: 'sterilization-packages',
+    subcategory: 'sterilization-pouches',
+    specialization: 'surgeon',
+    description: 'Большие плоские пакеты для стерилизации крупных инструментов. Размер 200x300мм.',
+    price: 1200,
+    image: '/images/sterilization-pouches-large.jpg',
+    images: ['/images/sterilization-pouches-large.jpg'],
+    inStock: true,
+    stockCount: 150,
+    brand: 'Клинипак',
+    specifications: {
+      'Размер': '200x300 мм',
+      'Количество': '50 штук',
+      'Материал': 'Бумага + пленка',
+      'Температура': 'До 180°C',
+      'Тип': 'Плоские пакеты'
+    },
+    features: [
+      'Большой размер',
+      'Надежная герметизация',
+      'Высокая прочность',
+      'Индикация стерилизации'
+    ],
+    applications: [
+      'Упаковка крупных инструментов',
+      'Стерилизация наборов',
+      'Профессиональная стерилизация',
+      'Клиническое применение'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'ISO 11607'],
+    rating: 4.7,
+    reviews: 89
+  },
+  // РУЛОНЫ ДЛЯ СТЕРИЛИЗАЦИИ
+  {
+    id: 'sterilization-roll-300mm-100m',
+    name: 'Рулон для стерилизации 300мм x 100м',
+    category: 'sterilization-rolls',
+    subcategory: 'sterilization-rolls',
+    specialization: 'surgeon',
+    description: 'Рулон упаковочного материала для стерилизации. Ширина 300мм, длина 100м.',
+    price: 2800,
+    image: '/images/sterilization-roll.jpg',
+    images: ['/images/sterilization-roll.jpg'],
+    inStock: true,
+    stockCount: 25,
+    brand: 'Клинипак',
+    specifications: {
+      'Ширина': '300 мм',
+      'Длина': '100 м',
+      'Материал': 'Крафт-бумага + пленка',
+      'Температура': 'До 180°C',
+      'Тип': 'Рулон'
+    },
+    features: [
+      'Экономичность',
+      'Универсальность',
+      'Высокая прочность',
+      'Индикация стерилизации'
+    ],
+    applications: [
+      'Упаковка инструментов',
+      'Стерилизация в автоклаве',
+      'Массовая упаковка',
+      'Профессиональное применение'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'ISO 11607'],
+    rating: 4.8,
+    reviews: 67
+  },
+  {
+    id: 'sterilization-roll-450mm-50m',
+    name: 'Рулон для стерилизации 450мм x 50м',
+    category: 'sterilization-rolls',
+    subcategory: 'sterilization-rolls',
+    specialization: 'surgeon',
+    description: 'Широкий рулон для упаковки крупных инструментов. Ширина 450мм, длина 50м.',
+    price: 3200,
+    image: '/images/sterilization-roll-wide.jpg',
+    images: ['/images/sterilization-roll-wide.jpg'],
+    inStock: true,
+    stockCount: 20,
+    brand: 'Клинипак',
+    specifications: {
+      'Ширина': '450 мм',
+      'Длина': '50 м',
+      'Материал': 'Крафт-бумага + пленка',
+      'Температура': 'До 180°C',
+      'Тип': 'Рулон'
+    },
+    features: [
+      'Широкая упаковка',
+      'Высокое качество',
+      'Надежность',
+      'Профессиональное применение'
+    ],
+    applications: [
+      'Упаковка крупных инструментов',
+      'Стерилизация наборов',
+      'Клиническое применение',
+      'Больничные протоколы'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'ISO 11607'],
+    rating: 4.9,
+    reviews: 45
+  },
+  // ОБЕРТОЧНЫЕ МАТЕРИАЛЫ
+  {
+    id: 'sterilization-wrapping-paper-50cm',
+    name: 'Оберточная бумага для стерилизации 50см x 50м',
+    category: 'wrapping-materials',
+    subcategory: 'wrapping-paper',
+    specialization: 'surgeon',
+    description: 'Оберточная бумага для стерилизации инструментов. Ширина 50см, длина 50м.',
+    price: 1500,
+    image: '/images/wrapping-paper.jpg',
+    images: ['/images/wrapping-paper.jpg'],
+    inStock: true,
+    stockCount: 80,
+    brand: 'Клинипак',
+    specifications: {
+      'Ширина': '50 см',
+      'Длина': '50 м',
+      'Материал': 'Крафт-бумага',
+      'Температура': 'До 180°C',
+      'Тип': 'Оберточная бумага'
+    },
+    features: [
+      'Высокая прочность',
+      'Хорошая проницаемость',
+      'Легкость использования',
+      'Экономичность'
+    ],
+    applications: [
+      'Обертывание инструментов',
+      'Стерилизация в автоклаве',
+      'Создание пакетов',
+      'Организация инструментов'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'ISO 11607'],
+    rating: 4.7,
+    reviews: 112
+  },
+  {
+    id: 'sterilization-fabric-70cm',
+    name: 'Оберточная ткань для стерилизации 70см x 1м',
+    category: 'wrapping-materials',
+    subcategory: 'wrapping-fabric',
+    specialization: 'surgeon',
+    description: 'Оберточная ткань для стерилизации инструментов. Размер 70см x 1м.',
+    price: 450,
+    image: '/images/wrapping-fabric.jpg',
+    images: ['/images/wrapping-fabric.jpg'],
+    inStock: true,
+    stockCount: 60,
+    brand: 'Клинипак',
+    specifications: {
+      'Размер': '70см x 1м',
+      'Материал': 'Хлопчатобумажная ткань',
+      'Температура': 'До 180°C',
+      'Тип': 'Оберточная ткань',
+      'Повторное использование': 'Да'
+    },
+    features: [
+      'Многоразовое использование',
+      'Высокая прочность',
+      'Хорошая проницаемость',
+      'Экономичность'
+    ],
+    applications: [
+      'Обертывание инструментов',
+      'Стерилизация в автоклаве',
+      'Создание наборов',
+      'Профессиональное применение'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'ISO 11607'],
+    rating: 4.8,
+    reviews: 78
   }
 ];
 
