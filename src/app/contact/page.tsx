@@ -4,7 +4,6 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, User } from 'lucide-react'
 import { config } from '@/lib/config'
-import YandexMap from '@/components/YandexMap'
 
 const contactInfo = [
   {
@@ -381,15 +380,39 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Map Placeholder */}
+            {/* Yandex Map */}
             <div className="bg-white rounded-2xl shadow-lg p-6">
               <h3 className="text-xl font-bold text-gray-900 mb-4">Как нас найти</h3>
-              <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <MapPin className="w-8 h-8 mx-auto mb-2" />
-                  <div className="text-sm">Карта</div>
-                  <div className="text-xs">г. Москва, ул. Нижние Мневники, 16</div>
-                </div>
+              <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
+                <iframe
+                  src="https://yandex.ru/map-widget/v1/?um=constructor%3A1234567890abcdef&amp;source=constructor"
+                  width="100%"
+                  height="100%"
+                  frameBorder="0"
+                  title="Карта МедТехИмпорт"
+                  className="w-full h-full"
+                  loading="lazy"
+                />
+              </div>
+              <div className="mt-4 text-center">
+                <a
+                  href="https://yandex.ru/maps/?text=Москва%2C%20ул.%20Нижние%20Мневники%2C%2016"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-800 text-sm font-medium"
+                >
+                  <MapPin className="w-4 h-4 mr-1" />
+                  Открыть в Яндекс.Картах
+                </a>
+              </div>
+              <div className="mt-4 text-center">
+                <p className="text-sm text-gray-600">
+                  <MapPin className="w-4 h-4 inline mr-1" />
+                  г. Москва, ул. Нижние Мневники, 16
+                </p>
+                <p className="text-xs text-gray-500 mt-1">
+                  Вход со стороны парковки
+                </p>
               </div>
             </div>
           </div>
