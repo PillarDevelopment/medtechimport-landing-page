@@ -121,6 +121,12 @@ export const categories: Category[] = [
     icon: 'Syringe'
   },
   {
+    id: 'endodontic-instruments',
+    name: 'Эндодонтические инструменты',
+    description: 'Полный набор инструментов для эндодонтического лечения',
+    icon: 'Syringe'
+  },
+  {
     id: 'isolation-materials',
     name: 'Материалы для изоляции',
     description: 'Раббердам и матрицы для изоляции рабочего поля',
@@ -1909,6 +1915,151 @@ export const medicalProducts: MedicalProduct[] = [
     certifications: ['ГОСТ Р 51000.3-96', 'CE', 'ISO 11607'],
     rating: 4.8,
     reviews: 78
+  },
+  // ЭНДОДОНТИЧЕСКИЕ ИНСТРУМЕНТЫ
+  {
+    id: 'endodontic-kit-basic',
+    name: 'Базовый набор эндодонтических инструментов',
+    category: 'endodontic-instruments',
+    subcategory: 'endodontic-kits',
+    specialization: 'endodontist',
+    description: 'Базовый набор эндодонтических инструментов для лечения корневых каналов. Включает все необходимые инструменты для качественного эндодонтического лечения.',
+    price: 4500,
+    image: '/images/endodontic-instruments.jpg',
+    images: ['/images/endodontic-instruments.jpg'],
+    inStock: true,
+    stockCount: 25,
+    brand: 'EndoTech',
+    specifications: {
+      'Тип': 'Базовый набор',
+      'Количество инструментов': '25 штук',
+      'Материал': 'Нержавеющая сталь',
+      'Упаковка': 'Стерильная',
+      'Совместимость': 'Стандартные наконечники'
+    },
+    features: [
+      'Полный набор инструментов',
+      'Высокое качество стали',
+      'Стерильная упаковка',
+      'Удобная организация'
+    ],
+    applications: [
+      'Эндодонтическое лечение',
+      'Обработка корневых каналов',
+      'Пломбирование каналов',
+      'Профессиональная эндодонтия'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
+    rating: 4.8,
+    reviews: 156
+  },
+  {
+    id: 'endodontic-kit-professional',
+    name: 'Профессиональный набор эндодонтических инструментов',
+    category: 'endodontic-instruments',
+    subcategory: 'endodontic-kits',
+    specialization: 'endodontist',
+    description: 'Профессиональный набор эндодонтических инструментов премиум-класса. Включает расширенный набор инструментов для сложных случаев.',
+    price: 8500,
+    image: '/images/endodontic-instruments.jpg',
+    images: ['/images/endodontic-instruments.jpg'],
+    inStock: true,
+    stockCount: 15,
+    brand: 'EndoTech Pro',
+    specifications: {
+      'Тип': 'Профессиональный набор',
+      'Количество инструментов': '45 штук',
+      'Материал': 'Титан + нержавеющая сталь',
+      'Упаковка': 'Стерильная',
+      'Особенности': 'Память формы, антибактериальное покрытие'
+    },
+    features: [
+      'Расширенный набор инструментов',
+      'Память формы',
+      'Антибактериальное покрытие',
+      'Профессиональное качество'
+    ],
+    applications: [
+      'Сложные эндодонтические случаи',
+      'Профессиональная эндодонтия',
+      'Микроскопическая эндодонтия',
+      'Ревизионное лечение'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
+    rating: 4.9,
+    reviews: 89
+  },
+  {
+    id: 'endodontic-ultrasonic-tips',
+    name: 'Ультразвуковые наконечники для эндодонтии',
+    category: 'endodontic-instruments',
+    subcategory: 'ultrasonic-tips',
+    specialization: 'endodontist',
+    description: 'Набор ультразвуковых наконечников для эндодонтического лечения. Обеспечивают эффективную очистку корневых каналов.',
+    price: 3200,
+    image: '/images/endodontic-instruments.jpg',
+    images: ['/images/endodontic-instruments.jpg'],
+    inStock: true,
+    stockCount: 30,
+    brand: 'UltraEndo',
+    specifications: {
+      'Количество': '8 штук',
+      'Тип': 'Ультразвуковые наконечники',
+      'Материал': 'Титан',
+      'Совместимость': 'Ультразвуковые аппараты',
+      'Размеры': 'Различные'
+    },
+    features: [
+      'Эффективная очистка каналов',
+      'Высокое качество титана',
+      'Различные размеры',
+      'Долговечность'
+    ],
+    applications: [
+      'Ультразвуковая очистка каналов',
+      'Удаление обтурационного материала',
+      'Обработка сложных каналов',
+      'Ревизионное лечение'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
+    rating: 4.7,
+    reviews: 124
+  },
+  {
+    id: 'endodontic-microscopes',
+    name: 'Эндодонтический микроскоп',
+    category: 'endodontic-instruments',
+    subcategory: 'microscopes',
+    specialization: 'endodontist',
+    description: 'Профессиональный эндодонтический микроскоп для точного лечения корневых каналов. Высокое разрешение и качественная оптика.',
+    price: 125000,
+    image: '/images/endodontic-instruments.jpg',
+    images: ['/images/endodontic-instruments.jpg'],
+    inStock: true,
+    stockCount: 3,
+    brand: 'MicroEndo',
+    specifications: {
+      'Увеличение': '4x - 25x',
+      'Разрешение': '4K',
+      'Освещение': 'LED',
+      'Тип': 'Стоматологический микроскоп',
+      'Гарантия': '2 года'
+    },
+    features: [
+      'Высокое разрешение 4K',
+      'LED освещение',
+      'Эргономичный дизайн',
+      'Цифровая запись'
+    ],
+    applications: [
+      'Микроскопическая эндодонтия',
+      'Сложные случаи лечения',
+      'Обучение и демонстрация',
+      'Документирование процедур'
+    ],
+    certifications: ['ГОСТ Р 51000.3-96', 'CE', 'FDA'],
+    rating: 4.9,
+    reviews: 23
   }
 ];
 
