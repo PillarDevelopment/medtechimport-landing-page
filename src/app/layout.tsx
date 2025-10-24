@@ -11,6 +11,22 @@ export const metadata: Metadata = {
   title: "Стоматологические расходники | Купить оптом от 1500₽ | MTIOC",
   description: "Стоматологические расходники оптом и в розницу. ✅ 500+ товаров ✅ Сертификаты ✅ Доставка по РФ за 1-3 дня. Боры, наконечники, слепочные массы.",
   keywords: "стоматологические расходники, одноразовые инструменты, альгинат, стоматологические боры, наконечники, ретракционные нити",
+  icons: {
+    icon: [
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.svg', type: 'image/svg+xml' }
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }
+    ],
+    other: [
+      { url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' }
+    ]
+  },
+  manifest: '/site.webmanifest'
 };
 
 export default function RootLayout({
@@ -21,6 +37,14 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <head>
+        {/* Favicon мета-теги для лучшей совместимости */}
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        
         {/* Schema.org разметка */}
         <JsonLd data={generateWebSiteSchema()} />
         <JsonLd data={generateOrganizationSchema()} />
