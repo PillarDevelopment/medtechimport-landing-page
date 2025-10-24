@@ -2,9 +2,9 @@ import Link from 'next/link'
 import { Award, Users, Target, Shield, Truck, Headphones } from 'lucide-react'
 
 const stats = [
-  { icon: Users, value: '200+', label: 'Стоматологических клиник' },
+  { icon: Users, value: '50+', label: 'Довольных клиентов' },
   { icon: Award, value: '500+', label: 'Стоматологических товаров' },
-  { icon: Truck, value: '10+', label: 'Лет на рынке' },
+  { icon: Truck, value: '5+', label: 'Лет на рынке' },
   { icon: Shield, value: '100%', label: 'Качество продукции' }
 ]
 
@@ -31,28 +31,6 @@ const values = [
   }
 ]
 
-const team = [
-  {
-    name: 'Анна Петрова',
-    position: 'Генеральный директор',
-    experience: '15 лет в стоматологической сфере'
-  },
-  {
-    name: 'Михаил Иванов',
-    position: 'Коммерческий директор',
-    experience: '12 лет опыта продаж'
-  },
-  {
-    name: 'Елена Сидорова',
-    position: 'Менеджер по закупкам',
-    experience: '10 лет в закупках'
-  },
-  {
-    name: 'Дмитрий Козлов',
-    position: 'Технический специалист',
-    experience: '8 лет в стоматологии'
-  }
-]
 
 export default function AboutPage() {
   return (
@@ -100,7 +78,7 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Компания МедТехИмпорт была основана в 2014 году с целью обеспечения 
+                  Компания МедТехИмпорт была основана в 2019 году с целью обеспечения 
                   стоматологических клиник качественными расходными материалами. 
                   За годы работы мы зарекомендовали себя как надежный партнер 
                   в сфере стоматологии.
@@ -191,34 +169,6 @@ export default function AboutPage() {
         </div>
       </div>
 
-      {/* Team */}
-      <div className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            Наша команда
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Профессионалы с многолетним опытом работы в стоматологической сфере
-          </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-lg p-6 text-center">
-                <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-blue-600">
-                    {member.name.split(' ').map(n => n[0]).join('')}
-                  </span>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-1">{member.name}</h3>
-                <div className="text-blue-600 font-medium mb-2">{member.position}</div>
-                <div className="text-sm text-gray-600">{member.experience}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
 
       {/* CTA */}
       <div className="py-20 bg-blue-600">

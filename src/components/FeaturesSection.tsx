@@ -90,11 +90,11 @@ export default function FeaturesSection() {
               <div className="text-blue-100">Стоматологических товаров</div>
             </div>
             <div>
-              <div className="text-4xl font-bold mb-2">200+</div>
-              <div className="text-blue-100">Стоматологических клиник</div>
+              <div className="text-4xl font-bold mb-2">50+</div>
+              <div className="text-blue-100">Довольных клиентов</div>
             </div>
             <div>
-              <div className="text-4xl font-bold mb-2">10+</div>
+              <div className="text-4xl font-bold mb-2">5+</div>
               <div className="text-blue-100">Лет на рынке</div>
             </div>
             <div>

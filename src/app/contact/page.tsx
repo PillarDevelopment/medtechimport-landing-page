@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, User } from 'lucide-react'
 import { config } from '@/lib/config'
+import YandexMap from '@/components/YandexMap'
 
 const contactInfo = [
   {
@@ -352,7 +353,7 @@ export default function ContactPage() {
                   </div>
                 </a>
                 <a 
-                  href="https://t.me/max" 
+                  href="https://max.ru/pillardev" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center space-x-3 p-3 bg-green-50 rounded-lg hover:bg-green-100 transition-colors"
