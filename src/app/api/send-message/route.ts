@@ -6,9 +6,9 @@ export async function POST(request: NextRequest) {
     const { name, email, phone, message } = body;
 
     // Валидация обязательных полей
-    if (!name || !phone || !message) {
+    if (!name || !phone) {
       return NextResponse.json(
-        { error: 'Пожалуйста, заполните все обязательные поля' },
+        { error: 'Пожалуйста, заполните все обязательные поля (имя и телефон)' },
         { status: 400 }
       );
     }
@@ -32,8 +32,7 @@ export async function POST(request: NextRequest) {
 👤 Имя: ${name}
 📧 Email: ${email || 'Не указан'}
 📞 Телефон: ${phone}
-💬 Сообщение:
-${message}
+💬 Сообщение: ${message || 'Не указано'}
 
 ⏰ Время: ${new Date().toLocaleString('ru-RU', {
       timeZone: 'Europe/Moscow',
