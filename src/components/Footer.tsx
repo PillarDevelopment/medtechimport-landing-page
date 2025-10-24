@@ -129,7 +129,7 @@ export default function Footer() {
                 <MapPin className="w-5 h-5 text-blue-400" />
                 <div>
                   <p className="text-gray-400">Адрес</p>
-                  <p className="font-medium">г. Москва, ул. Нижние Мневники, 16</p>
+                  <p className="font-medium">г. Москва, Улица Нижние Мнёвники, 16к4</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">

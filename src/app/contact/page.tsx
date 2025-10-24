@@ -15,14 +15,14 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email',
-    details: ['info@medtechimport.ru', 'sales@medtechimport.ru'],
-    description: 'Ответим в течение 2 часов'
+    details: ['info@medtechimport.ru'],
+    description: ''
   },
   {
     icon: MapPin,
     title: 'Адрес',
-    details: ['г. Москва, ул. Нижние Мневники, 16'],
-    description: 'Вход со стороны парковки'
+    details: ['г. Москва, Улица Нижние Мнёвники, 16к4'],
+    description: ''
   },
   {
     icon: Clock,
@@ -32,26 +32,6 @@ const contactInfo = [
   }
 ]
 
-const departments = [
-  {
-    name: 'Отдел продаж',
-    phone: '+7 961 627 15 55',
-    email: 'sales@medtechimport.ru',
-    description: 'Консультации по стоматологическим товарам и оформление заказов'
-  },
-  {
-    name: 'Техническая поддержка',
-    phone: '+7 961 627 15 55',
-    email: 'support@medtechimport.ru',
-    description: 'Помощь с выбором стоматологических товаров и технические вопросы'
-  },
-  {
-    name: 'Отдел закупок',
-    phone: '+7 961 627 15 55',
-    email: 'purchasing@medtechimport.ru',
-    description: 'Вопросы по поставкам и сотрудничеству'
-  }
-]
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -318,20 +298,6 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Departments */}
-            <div className="bg-white rounded-2xl shadow-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-6">Отделы</h3>
-              <div className="space-y-4">
-                {departments.map((dept, index) => (
-                  <div key={index} className="border-b border-gray-100 pb-4 last:border-b-0 last:pb-0">
-                    <h4 className="font-semibold text-gray-900 mb-1">{dept.name}</h4>
-                    <div className="text-sm text-gray-600 mb-1">{dept.phone}</div>
-                    <div className="text-sm text-gray-600 mb-2">{dept.email}</div>
-                    <div className="text-xs text-gray-500">{dept.description}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
 
             {/* Social Media */}
             <div className="bg-white rounded-2xl shadow-lg p-6">
@@ -396,7 +362,7 @@ export default function ContactPage() {
               </div>
               <div className="mt-4 text-center">
                 <a
-                  href="https://yandex.ru/maps/?text=Москва%2C%20ул.%20Нижние%20Мневники%2C%2016"
+                  href="https://yandex.ru/maps/?text=Москва%2C%20Улица%20Нижние%20Мнёвники%2C%2016к4"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-blue-600 hover:text-blue-800 text-sm font-medium"
@@ -408,10 +374,7 @@ export default function ContactPage() {
               <div className="mt-4 text-center">
                 <p className="text-sm text-gray-600">
                   <MapPin className="w-4 h-4 inline mr-1" />
-                  г. Москва, ул. Нижние Мневники, 16
-                </p>
-                <p className="text-xs text-gray-500 mt-1">
-                  Вход со стороны парковки
+                  г. Москва, Улица Нижние Мнёвники, 16к4
                 </p>
               </div>
             </div>
