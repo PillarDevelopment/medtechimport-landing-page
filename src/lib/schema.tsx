@@ -252,7 +252,7 @@ export function generateLocalBusinessSchema(): object {
       "longitude": "37.6176"
     },
     "telephone": "+7-961-627-15-55",
-    "email": "info@mtioc.ru",
+    "email": "info@2rm.ru",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],

@@ -15,7 +15,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email',
-    details: ['info@medtechimport.ru'],
+    details: ['info@2rm.ru'],
     description: ''
   },
   {
